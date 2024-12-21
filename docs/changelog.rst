@@ -2,6 +2,11 @@ Change log
 ==========
 
 .. currentmodule:: picozero
+0.4.2 ... 0.4.3
+---------------
++ Introduced ``I2cLcd`` class
++ Introduced ``move_to_degree`` API for Servo
++ Documentation tidy up and minor fixes
 
 0.4.1 - 2022-12-22
 ------------------

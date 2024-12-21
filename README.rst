@@ -5,6 +5,9 @@ picozero
 
 A beginner-friendly library to help you use common electronics components with the Raspberry Pi Pico.
 
+This is a fork of the `origin picozero library. <https://github.com/RaspberryPiFoundation/picozero>`_
+
+
 .. code-block:: python
 
     from picozero import LED, Button
@@ -23,21 +26,21 @@ Beta. There will be bugs and issues. API changes are likely. More devices will b
 Documentation
 -------------
 
-Documentation is available at `picozero.readthedocs.io <https://picozero.readthedocs.io>`_:
+Documentation is available at `picozero-rw.readthedocs.io <https://picozero-rw.readthedocs.io>`_:
 
-- `Installation and getting started guide <https://picozero.readthedocs.io/en/latest/gettingstarted.html>`_
-- `Recipes and how-to's <https://picozero.readthedocs.io/en/latest/recipes.html>`_
-- `API <https://picozero.readthedocs.io/en/latest/api.html>`_
-- `Example code <https://github.com/RaspberryPiFoundation/picozero/tree/master/docs/examples>`_
+- `Installation and getting started guide <https://picozero-rw.readthedocs.io/en/latest/gettingstarted.html>`_
+- `Recipes and how-to's <https://picozero-rw.readthedocs.io/en/latest/recipes.html>`_
+- `API <https://picozero-rw.readthedocs.io/en/latest/api.html>`_
+- `Example code <https://github.com/roboticsware/picozero/tree/master/docs/examples>`_
 
 Code
 ----
 
-The code and project is at `github.com/RaspberryPiFoundation/picozero <https://github.com/RaspberryPiFoundation/picozero>`_. 
+The code and project is at `github.com/roboticsware/picozero <https://github.com/roboticsware/picozero>`_. 
 
-Issues can be raised at `github.com/RaspberryPiFoundation/picozero/issues <https://github.com/RaspberryPiFoundation/picozero/issues>`_ (see `Contributing <https://picozero.readthedocs.io/en/latest/contributing.html>`_).
+Issues can be raised at `github.com/roboticsware/picozero/issues <https://github.com/roboticsware/picozero/issues>`_ (see `Contributing <https://picozero-rw.readthedocs.io/en/latest/contributing.html>`_).
 
-The latest distribution is available at `pypi.org/project/picozero/ <https://pypi.org/project/picozero/>`_.
+The latest distribution is available at `pypi.org/project/picozero-rw/ <https://pypi.org/project/picozero-rw/>`_.
 
 Thanks
 ------

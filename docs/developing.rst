@@ -27,7 +27,7 @@ Build
 
 5. Push all changes to ``master`` branch
 
-6. Create a `release <https://github.com/RaspberryPiFoundation/picozero/releases>`_ in github and upload ``picozero-#-#-#.tar.gz`` source file to the release
+6. Create a `release <https://github.com/roboticsware/picozero/releases>`_ in github and upload ``picozero-#-#-#.tar.gz`` source file to the release
 
 Documentation
 -------------
@@ -44,9 +44,9 @@ To test the documentation build, run the following command from the docs directo
 
 The website will be built in the directory docs/_build/html.
 
-Documentation can be viewed at `picozero.readthedocs.io`_ and is automatically built and deployed on push to github.
+Documentation can be viewed at `picozero-rw.readthedocs.io`_ and is automatically built and deployed on push to github.
 
-.. _picozero.readthedocs.io: https://picozero.readthedocs.io
+.. _picozero-rw.readthedocs.io: https://picozero-rw.readthedocs.io
 
 Tests
 -----

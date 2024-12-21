@@ -16,13 +16,13 @@ picozero is currently in Beta, pre release 1.0, you should consider the followin
 
 # Suggestions
 
-If you have an idea for a new feature or would like to see a device included in picozero, please raise an [issue](https://github.com/RaspberryPiFoundation/picozero/issues). Please explain your reasoning clearly.
+If you have an idea for a new feature or would like to see a device included in picozero, please raise an [issue](https://github.com/roboticsware/picozero/issues). Please explain your reasoning clearly.
 
 # Bugs 
 
-Please raise an [issue](https://github.com/RaspberryPiFoundation/picozero/issues) for any bugs found. Please include code examples and circuit diagrams if appropriate. 
+Please raise an [issue](https://github.com/roboticsware/picozero/issues) for any bugs found. Please include code examples and circuit diagrams if appropriate. 
 
 # Pull requests
 
-All pull requests should be based on the [dev](https://github.com/RaspberryPiFoundation/picozero/tree/dev) branch of picozero. 
+All pull requests should be based on the [dev](https://github.com/roboticsware/picozero/tree/dev) branch of picozero. 
 

@@ -1,13 +1,13 @@
 from setuptools import setup
 
-__project__ = 'picozero_rw'
+__project__ = 'picozero-rw'
 __packages__ = ['picozero']
 __desc__ = 'A beginner-friendly library for using common electronics components with the Raspberry Pi Pico.'
 __version__ = '0.4.3'
 __author__ = "Roboticsware"
 __author_email__ = 'roboticsware_uz@gmail.com'
 __license__ = 'MIT'
-__url__ = 'https://github.com/RaspberryPiFoundation/picozero'
+__url__ = 'https://github.com/roboticsware/picozero'
 __keywords__ = [
     'raspberry',
     'pi',
@@ -46,7 +46,7 @@ lcd.move_to(0, 1)
 lcd.putstr('Hello Roboticsware')
 ```
 
-Documentation is available at [picozero.readthedocs.io](https://picozero.readthedocs.io/en/latest/).
+Documentation is available at [picozero-rw.readthedocs.io](https://picozero-rw.readthedocs.io/en/latest/).
 """
 
 setup(

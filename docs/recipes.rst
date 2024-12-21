@@ -281,3 +281,13 @@ Get the distance in metres from an ultrasonic distance sensor (HC-SR04):
     :alt: A diagram of the Raspberry Pi Pico connected to an HC-SR04 distance sensor.
 
 .. literalinclude:: examples/ultrasonic_distance_sensor.py
+
+I2C LCD Display
+--------------------------
+
+Print chracters on LiquidCrystal displays (LCD) by using the I2C bus and an PCF8574 I2C adapter.
+
+.. image:: images/i2c_lcd.png
+    :alt: A diagram of the Raspberry Pi Pico connected to an 16x2 Character LCD Display by I2C bus.
+
+.. literalinclude:: examples/i2c_lcd.py

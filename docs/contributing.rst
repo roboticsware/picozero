@@ -28,6 +28,6 @@ Please raise an `issue`_ for any bugs found. Please include code examples and ci
 Pull requests
 -------------
 
-All pull requests should be based on the `dev <https://github.com/RaspberryPiFoundation/picozero/tree/dev>`_ branch of picozero. 
+All pull requests should be based on the `dev <https://github.com/roboticsware/picozero/tree/dev>`_ branch of picozero. 
 
-.. _issue: https://github.com/RaspberryPiFoundation/picozero/issues
+.. _issue: https://github.com/roboticsware/picozero/issues
