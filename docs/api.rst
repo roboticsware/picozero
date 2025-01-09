@@ -145,3 +145,11 @@ pinout
 ------
 
 .. autofunction:: pinout
+
+I2cLcd
+------------------
+
+.. autoclass:: I2cLcd
+    :show-inheritance:
+    :inherited-members:
+    :members: 

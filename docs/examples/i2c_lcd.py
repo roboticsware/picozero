@@ -1,7 +1,7 @@
 from picozero import I2cLcd
 from time import sleep
 
-lcd =  I2cLcd(18, 19)  # sda=18, scl=19
+lcd =  I2cLcd(19, 18)  # scl=19, sda=18
 
 lcd.putstr('Hello World')
 sleep(1)

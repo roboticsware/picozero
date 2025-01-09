@@ -47,10 +47,10 @@ Thanks
 
 picozero is inspired by `gpiozero <https://gpiozero.readthedocs.io/en/stable/>`_ (and reuses some of its underlying structure), but is, by design, lighter weight and aligned with the Raspberry Pi Pico. Thank you to everyone who has contributed to the gpiozero project.
 
-.. |pypibadge| image:: https://badge.fury.io/py/picozero.svg
+.. |pypibadge| image:: https://badge.fury.io/py/picozero-rw.svg
    :target: https://badge.fury.io/py/picozero-rw
    :alt: Latest Version
 
-.. |docsbadge| image:: https://readthedocs.org/projects/picozero/badge/
+.. |docsbadge| image:: https://readthedocs.org/projects/picozero-rw/badge/
    :target: https://readthedocs.org/projects/picozero-rw/
    :alt: Docs
