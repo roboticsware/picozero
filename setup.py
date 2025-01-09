@@ -3,7 +3,7 @@ from setuptools import setup
 __project__ = 'picozero-rw'
 __packages__ = ['picozero']
 __desc__ = 'This is a fork of the origin picozero library'
-__version__ = '0.4.3'
+__version__ = '0.4.4'
 __author__ = "Roboticsware"
 __author_email__ = 'roboticsware_uz@gmail.com'
 __license__ = 'MIT'
