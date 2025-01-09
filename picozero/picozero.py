@@ -2055,6 +2055,13 @@ class AnalogInputDevice(InputDevice, PinMixin):
         Returns the voltage of the analogue device.
         """
         return self.value * 3.3
+    
+    @property
+    def raw_value(self):
+        """
+        Returns raw value of the up-scaled 16bit ADC.
+        """
+        return self._adc.read_u16() if self.active_state else 65535 - self._adc.read_u16()
 
     def close(self):
         self._adc = None
