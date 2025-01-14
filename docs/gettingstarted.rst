@@ -58,7 +58,7 @@ picozero can be installed by copying the ``picozero.py`` code to your Raspberry 
 Either clone the picozero `GitHub repository`_ or copy the code from the `picozero.py`_ file and save it on your main computer.
 
 .. _GitHub repository: https://github.com/roboticsware/picozero
-.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py?token=GHSAT0AAAAAABRLTKWZDBSYBE54NJ7AIZ6MYSENI2A
+.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/refs/heads/main/picozero/picozero.py
 
 Create a new file called picozero.py, copy code into the file and save it on your Raspberry Pi Pico.
 

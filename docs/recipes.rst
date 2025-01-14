@@ -194,6 +194,18 @@ Use a potentiometer to control the brightness of an LED:
 
 .. literalinclude:: examples/pot_led.py
 
+Joystick
+-------------
+
+Joystick is similar to potentiometer so we can Pot class to control a joystick.
+
+.. image:: images/joystick.png
+    :alt: A diagram of the Raspberry Pi Pico connected to a joystick
+
+Move the joystick to its minimum, mid and maximum positions.
+
+.. literalinclude:: examples/joystick.py
+
 Buzzer
 ------
 
