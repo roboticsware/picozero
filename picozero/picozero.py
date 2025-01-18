@@ -2174,10 +2174,12 @@ class DistanceSensor(PinsMixin):
 
     :param float max_distance:
         The :attr:`value` attribute reports a normalized value between 0 (too
-        close to measure) and 1 (maximum distance). This parameter specifies
-        the maximum distance expected in meters. This defaults to 1.
+        close to measure) and 400 (maximum distance). This parameter specifies
+        the maximum distance expected in centimeters. This defaults to 400.
+        (It was originally 1 (maximum distance), but changed to 400 becasue the distance sensor measures up to 4 meters.)
+        (it was orgiinally meters, but changed to centimeters, so 400 means 400 centimeters)
     """
-    def __init__(self, echo, trigger, max_distance=1):
+    def __init__(self, echo, trigger, max_distance = 400):
         self._pin_nums = (echo, trigger)
         self._max_distance = max_distance
         self._echo = Pin(echo, mode=Pin.IN, pull=Pin.PULL_DOWN)
@@ -2198,6 +2200,7 @@ class DistanceSensor(PinsMixin):
         # be considered out of range. The maximum length of the
         # echo is 38 milliseconds but it's not known how long the
         # transmission takes after the trigger
+
         stop = ticks_ms() + 100
         while echo_off is None and not timed_out:
             if self._echo.value() == 1 and echo_on is None:
@@ -2209,8 +2212,9 @@ class DistanceSensor(PinsMixin):
             
         if echo_off is None or timed_out:
             return None
+        # It was 0.000343, but changed to 0.0343 to measure in centimeters
         else:
-            distance = ((echo_off - echo_on) * 0.000343) / 2
+            distance = ((echo_off - echo_on) * 0.0343) / 2
             distance = min(distance, self._max_distance)
             return distance
     
@@ -2219,9 +2223,11 @@ class DistanceSensor(PinsMixin):
         """
         Returns a value between 0, indicating the reflector is either touching 
         the sensor or is sufficiently near that the sensor can’t tell the 
-        difference, and 1, indicating the reflector is at or beyond the 
+        difference, and 400, indicating the reflector is at or beyond the 
         specified max_distance. A return value of None indicates that the
         echo was not received before the timeout.
+        (It was originally 1 (maximum distance), but changed to 400.)
+        (It indicates 400 centimeters)
         """
         distance = self.distance
         return distance / self._max_distance if distance is not None else None
@@ -2229,15 +2235,17 @@ class DistanceSensor(PinsMixin):
     @property
     def distance(self):
         """
-        Returns the current distance measured by the sensor in meters. Note 
+        Returns the current distance measured by the sensor in centimeters. Note 
         that this property will have a value between 0 and max_distance.
+        (It was orgiinally meters, but changed to centimeters.)
         """
         return self._read()
 
     @property
     def max_distance(self):
         """
-        Returns the maximum distance that the sensor will measure in metres.
+        Returns the maximum distance that the sensor will measure in centimetres.
+        (It was orgiinally meters, but changed to centimeters.)
         """
         return self._max_distance
 
