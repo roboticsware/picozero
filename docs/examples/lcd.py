@@ -1,0 +1,17 @@
+from picozero import GpioLcd
+from time import sleep
+
+# Create the LCD object
+lcd = GpioLcd(rs_pin=16,
+              enable_pin=17,
+              d4_pin=18,
+              d5_pin=19,
+              d6_pin=20,
+              d7_pin=21,
+              num_lines=2, 
+              num_columns=16)
+
+lcd.putstr('Hello World')
+sleep(1)
+lcd.move_to(0, 1)
+lcd.putstr('Hello Pi Pico')

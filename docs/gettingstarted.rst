@@ -75,7 +75,7 @@ In the **View** menu, ensure that the **Files** option has a tick. This will let
 Either clone the picozero `GitHub repository`_ or copy the code from the `picozero.py`_ file and save it on your main computer.
 
 .. _GitHub repository: https://github.com/roboticsware/picozero
-.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py?token=GHSAT0AAAAAABRLTKWZDBSYBE54NJ7AIZ6MYSENI2A
+.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/refs/heads/main/picozero/picozero.py
 
 In Thonny, navigate to the cloned directory or location you saved the file in and find the ``picozero.py`` file.
 

@@ -197,7 +197,7 @@ Use a potentiometer to control the brightness of an LED:
 Joystick
 -------------
 
-Joystick is similar to potentiometer so we can Pot class to control a joystick.
+Joystick is similar to potentiometer so we can use the Pot class to control a joystick.
 
 .. image:: images/joystick.png
     :alt: A diagram of the Raspberry Pi Pico connected to a joystick
@@ -287,14 +287,14 @@ Check the internal temperature of the Raspberry Pi Pico in degrees Celcius:
 Ultrasonic distance sensor
 --------------------------
 
-Get the distance in metres from an ultrasonic distance sensor (HC-SR04):
+Get the distance in centimetres from an ultrasonic distance sensor (HC-SR04):
 
 .. image:: images/distance_sensor_bb.svg
     :alt: A diagram of the Raspberry Pi Pico connected to an HC-SR04 distance sensor.
 
 .. literalinclude:: examples/ultrasonic_distance_sensor.py
 
-I2C LCD Display
+LCD Display
 --------------------------
 
 Print chracters on LiquidCrystal displays (LCD) by using the I2C bus and an PCF8574 I2C adapter.
@@ -303,3 +303,10 @@ Print chracters on LiquidCrystal displays (LCD) by using the I2C bus and an PCF8
     :alt: A diagram of the Raspberry Pi Pico connected to an 16x2 Character LCD Display by I2C bus.
 
 .. literalinclude:: examples/i2c_lcd.py
+
+Print chracters on LiquidCrystal displays (LCD) by using GPIO pins only.
+
+.. image:: images/lcd.png
+    :alt: A diagram of the Raspberry Pi Pico connected to an 16x2 Character LCD Display.
+
+.. literalinclude:: examples/lcd.py
