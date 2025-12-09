@@ -3,7 +3,7 @@ from setuptools import setup
 __project__ = 'picozero-rw'
 __packages__ = ['picozero']
 __desc__ = 'This is a fork of the origin picozero library'
-__version__ = '0.4.4'
+__version__ = '0.4.5'
 __author__ = "Roboticsware"
 __author_email__ = 'roboticsware_uz@gmail.com'
 __license__ = 'MIT'
@@ -38,7 +38,7 @@ button.when_released = led.off
 from picozero import I2cLcd
 from time import sleep
 
-lcd = I2cLcd(27, 26) # LCD 16x2, sda=27, scl=26
+lcd = I2cLcd(1, 27, 26) # LCD 16x2, i2c_id=1, sda=27, scl=26
 
 lcd.putstr('Hello World')
 sleep(1)

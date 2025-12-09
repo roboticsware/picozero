@@ -1,6 +1,6 @@
 __name__ = "picozero"
 __package__ = "picozero"
-__version__ = '0.4.4'
+__version__ = '0.4.5'
 __author__ = "Raspberry Pi Foundation"
 
 from .picozero import (

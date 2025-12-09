@@ -205,8 +205,8 @@ class LcdApi:
 class I2cLcd(LcdApi):
     """Implements a character based lcd connected via PCF8574 on i2c."""
 
-    def __init__(self, scl_pin, sda_pin, i2c_addr=0x27, num_lines=2, num_columns=16):
-        self.i2c = I2C(id=1, scl=Pin(scl_pin), sda=Pin(sda_pin), freq=100000)
+    def __init__(self, i2c_id, scl_pin, sda_pin, i2c_addr=0x27, num_lines=2, num_columns=16):
+        self.i2c = I2C(id=i2c_id, scl=Pin(scl_pin), sda=Pin(sda_pin), freq=100000)
         self.i2c_addr = i2c_addr
         self.i2c.writeto(self.i2c_addr, bytearray([0]))
         sleep_ms(20)   # Allow LCD time to powerup
