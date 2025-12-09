@@ -38,7 +38,7 @@ button.when_released = led.off
 from picozero import I2cLcd
 from time import sleep
 
-lcd = I2cLcd(1, 27, 26) # LCD 16x2, i2c_id=1, sda=27, scl=26
+lcd = I2cLcd(1, 3, 2) # LCD 16x2, i2c_id=1, scl=3, sda=2
 
 lcd.putstr('Hello World')
 sleep(1)
