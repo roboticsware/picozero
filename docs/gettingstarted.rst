@@ -29,7 +29,7 @@ Select the MicroPython interpreter
 
 You can change which interpreter you are using in Thonny by selecting the desired option at the bottom right of the screen. Make sure that **MicroPython (Raspberry Pi Pico)** is selected.
 
-.. image:: images/thonny-switch-interpreter.jpg
+.. image:: /images/thonny-switch-interpreter.jpg
     :alt: Selecting MicroPython (Raspberry Pi Pico) from the interpreter menu in the bottom right of the Thonny IDE
 
 Install picozero from PyPI in Thonny
@@ -37,17 +37,17 @@ Install picozero from PyPI in Thonny
 
 To install picozero within Thonny, select **Tools** > **Manage packages...**
 
-.. image:: images/thonny-manage-packages.jpg
+.. image:: /images/thonny-manage-packages.jpg
     :alt: Selecting Manage Packages from the Tools menu in Thonny
 
 Search for `picozero` on PyPI.
 
-.. image:: images/thonny-packages-picozero.jpg
+.. image:: /images/thonny-packages-picozero.jpg
     :alt: picozero entered in the Search box of the Manage Packages window in Thonny
 
 Click on **install** to download the package.
 
-.. image:: images/thonny-install-package.jpg
+.. image:: /images/thonny-install-package.jpg
     :alt: Information about the picozero package shown in the Manage Packages window
 
 Manual install
@@ -69,7 +69,7 @@ Alternatively, you can use the Thonny file manager to transfer the ``picozero.py
 
 In the **View** menu, ensure that the **Files** option has a tick. This will let you see the files.
 
-.. image:: images/thonny-view-files.jpg
+.. image:: /images/thonny-view-files.jpg
     :alt: The Files option selected from the View menu
 
 Either clone the picozero `GitHub repository`_ or copy the code from the `picozero.py`_ file and save it on your main computer.
@@ -79,13 +79,13 @@ Either clone the picozero `GitHub repository`_ or copy the code from the `picoze
 
 In Thonny, navigate to the cloned directory or location you saved the file in and find the ``picozero.py`` file.
 
-.. image:: images/thonny-navigate-downloads.jpg
+.. image:: /images/thonny-navigate-downloads.jpg
 
 Right click on the file and select the **Upload to /** option. You should see a copy of the ``picozero.py`` file on the Raspberry Pi Pico.
 
-.. image:: images/thonny-upload-files.jpg
+.. image:: /images/thonny-upload-files.jpg
     :alt: The "Upload to /" option selected in the picozero.py file menu
-.. image:: images/thonny-copy-picozero.jpg
+.. image:: /images/thonny-copy-picozero.jpg
     :alt: The picozero.py file shown in the Raspberry Pi Pico file viewer.
 
 Write a program to control the onboard LED
@@ -109,11 +109,11 @@ You can choose to run the program from your computer.
 
 Click on the **Run current script** button.
 
-.. image:: images/run-current-script.jpg
+.. image:: /images/run-current-script.jpg
 
 Choose to save the script on **This computer** and provide a filename.
 
-.. image:: images/save-this-computer.png
+.. image:: /images/save-this-computer.png
 
 Run the program on your Raspberry Pi Pico
 -----------------------------------------
@@ -122,10 +122,10 @@ You can choose to run the program from the Raspberry Pi Pico.
 
 Click on the **Run current script** button.
 
-.. image:: images/run-current-script.jpg
+.. image:: /images/run-current-script.jpg
 
 Choose to save the script on **Raspberry Pi Pico** and provide a filename.
 
-.. image:: images/save-this-raspberry-pi-pico.png
+.. image:: /images/save-this-raspberry-pi-pico.png
 
 If you call the file ``main.py``, it will run automatically when the Pico is powered on.

@@ -33,7 +33,7 @@ picozero를 사용하려면 스크립트 맨 위에 `import` 줄을 추가해야
 Pico LED
 --------
 
-.. image:: ../images/pico_led.svg
+.. image:: /images/pico_led.svg
     :alt: 내장 LED에 GP25 라벨이 붙은 Raspberry Pi Pico 다이어그램.
 
 Raspberry Pi Pico의 LED를 켜려면:
@@ -83,7 +83,7 @@ Raspberry Pi Pico의 LED를 켜려면:
 LED
 ---
  
-.. image:: ../images/pico_led_14_bb.svg
+.. image:: /images/pico_led_14_bb.svg
     :alt: GP14와 GND에 노란색 LED가 연결된 Raspberry Pi Pico 다이어그램.
 
 Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
@@ -194,7 +194,7 @@ LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 
 
 조이스틱은 가변 저항과 유사하므로 Pot 클래스를 사용하여 조이스틱을 제어할 수 있습니다.
 
-.. image:: ../images/joystick.png
+.. image:: /images/joystick.png
     :alt: 조이스틱에 연결된 Raspberry Pi Pico 다이어그램
 
 조이스틱을 최소, 중간 및 최대 위치로 움직여 보십시오.
@@ -234,7 +234,7 @@ LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 
 
 단일 핀, 3.3v 및 그라운드에 연결된 서보 모터입니다.
 
-.. image:: ../images/servo.svg
+.. image:: /images/servo.svg
     :alt: 서보 모터에 연결된 Raspberry Pi Pico 다이어그램
 
 서보를 최소, 중간 및 최대 위치로 움직입니다.
@@ -261,7 +261,7 @@ LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 
 
 간단한 이륜 로봇 로버를 만듭니다.
 
-.. image:: ../images/robot_bb.svg
+.. image:: /images/robot_bb.svg
     :alt: 배터리 팩으로 전원이 공급되는 모터 드라이버 보드를 통해 두 개의 모터에 연결된 Raspberry Pi Pico 다이어그램.
 
 로버를 1초 동안 앞으로 움직이고 멈춥니다:
@@ -284,7 +284,7 @@ Raspberry Pi Pico의 내부 온도를 섭씨 단위로 확인합니다:
 
 초음파 거리 센(HC-SR04)로부터의 거리를 센티미터 단위로 가져옵니다:
 
-.. image:: ../images/distance_sensor_bb.svg
+.. image:: /images/distance_sensor_bb.svg
     :alt: HC-SR04 거리 센서에 연결된 Raspberry Pi Pico 다이어그램.
 
 .. literalinclude:: ../examples/ultrasonic_distance_sensor.py
@@ -294,14 +294,14 @@ LCD 디스플레이
 
 I2C 버스와 PCF8574 I2C 어댑터를 사용하여 LiquidCrystal 디스플레이(LCD)에 문자를 출력합니다.
 
-.. image:: ../images/i2c_lcd.png
+.. image:: /images/i2c_lcd.png
     :alt: I2C 버스를 통해 16x2 캐릭터 LCD 디스플레이에 연결된 Raspberry Pi Pico 다이어그램.
 
 .. literalinclude:: ../examples/i2c_lcd.py
 
 GPIO 핀만 사용하여 LiquidCrystal 디스플레이(LCD)에 문자를 출력합니다.
 
-.. image:: ../images/lcd.png
+.. image:: /images/lcd.png
     :alt: 16x2 캐릭터 LCD 디스플레이에 연결된 Raspberry Pi Pico 다이어그램.
 
 .. literalinclude:: ../examples/lcd.py

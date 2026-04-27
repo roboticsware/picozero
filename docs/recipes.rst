@@ -33,7 +33,7 @@ In this case, all references to picozero items must be prefixed::
 Pico LED
 --------
 
-.. image:: images/pico_led.svg
+.. image:: /images/pico_led.svg
     :alt: A diagram of the Raspberry Pi Pico with a GP25 label attached to the onboard LED.
 
 To turn on the LED on your Raspberry Pi Pico:
@@ -83,7 +83,7 @@ You can output a *diagram* of the Raspberry Pi Pico which displays its pins and 
 LEDs
 ------
  
-.. image:: images/pico_led_14_bb.svg
+.. image:: /images/pico_led_14_bb.svg
     :alt: A diagram of the Raspberry Pi Pico with a yellow LED connected to GP14 and GND.
 
 You can control external LEDs with a Raspberry Pi Pico.
@@ -199,7 +199,7 @@ Joystick
 
 Joystick is similar to potentiometer so we can use the Pot class to control a joystick.
 
-.. image:: images/joystick.png
+.. image:: /images/joystick.png
     :alt: A diagram of the Raspberry Pi Pico connected to a joystick
 
 Move the joystick to its minimum, mid and maximum positions.
@@ -239,7 +239,7 @@ Servo
 
 A servo motor connected to a single pin, 3.3v and ground.
 
-.. image:: images/servo.svg
+.. image:: /images/servo.svg
     :alt: A diagram of the Raspberry Pi Pico connected to a servo motor
 
 Move the servo to its minimum, mid and maximum positions.
@@ -266,7 +266,7 @@ Robot rover
 
 Make a simple two-wheeled robot rover.
 
-.. image:: images/robot_bb.svg
+.. image:: /images/robot_bb.svg
     :alt: A diagram of the Raspberry Pi Pico connected to two motors via a motor controller board powered by a battery pack.
 
 Move the rover forward for 1 second and stop:
@@ -289,7 +289,7 @@ Ultrasonic distance sensor
 
 Get the distance in centimetres from an ultrasonic distance sensor (HC-SR04):
 
-.. image:: images/distance_sensor_bb.svg
+.. image:: /images/distance_sensor_bb.svg
     :alt: A diagram of the Raspberry Pi Pico connected to an HC-SR04 distance sensor.
 
 .. literalinclude:: examples/ultrasonic_distance_sensor.py
@@ -299,14 +299,14 @@ LCD Display
 
 Print chracters on LiquidCrystal displays (LCD) by using the I2C bus and an PCF8574 I2C adapter.
 
-.. image:: images/i2c_lcd.png
+.. image:: /images/i2c_lcd.png
     :alt: A diagram of the Raspberry Pi Pico connected to an 16x2 Character LCD Display by I2C bus.
 
 .. literalinclude:: examples/i2c_lcd.py
 
 Print chracters on LiquidCrystal displays (LCD) by using GPIO pins only.
 
-.. image:: images/lcd.png
+.. image:: /images/lcd.png
     :alt: A diagram of the Raspberry Pi Pico connected to an 16x2 Character LCD Display.
 
 .. literalinclude:: examples/lcd.py

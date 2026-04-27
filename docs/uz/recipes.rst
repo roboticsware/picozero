@@ -33,7 +33,7 @@ Bunday holda, barcha picozero elementlariga murojaat qilishda prefiks qo'shilish
 Pico LED
 --------
 
-.. image:: ../images/pico_led.svg
+.. image:: /images/pico_led.svg
     :alt: Raspberry Pi Pico-ning ichki LED-iga GP25 yorlig'i biriktirilgan diagrammasi.
 
 Raspberry Pi Pico-dagi LED-ni yoqish uchun:
@@ -83,7 +83,7 @@ Siz Raspberry Pi Pico-ning pinlari va ularning raqamlarini ko'rsatadigan *diagra
 Svetodiodlar (LED)
 ------------------
  
-.. image:: ../images/pico_led_14_bb.svg
+.. image:: /images/pico_led_14_bb.svg
     :alt: GP14 va GND-ga ulangan sariq LED-li Raspberry Pi Pico diagrammasi.
 
 Raspberry Pi Pico yordamida tashqi svetodiodlarni (LED) boshqarishingiz mumkin.
@@ -198,7 +198,7 @@ Joystik
 
 Joystik potensiometrga o'xshaydi, shuning uchun joystikni boshqarish uchun Pot klassidan foydalanishimiz mumkin.
 
-.. image:: ../images/joystick.png
+.. image:: /images/joystick.png
     :alt: Joystikka ulangan Raspberry Pi Pico diagrammasi
 
 Joystikni minimal, o'rta va maksimal pozitsiyalariga o'tkazing.
@@ -238,7 +238,7 @@ Servo
 
 Bitta pin, 3.3v va yerga (ground) ulangan servo motor.
 
-.. image:: ../images/servo.svg
+.. image:: /images/servo.svg
     :alt: Servo motorga ulangan Raspberry Pi Pico diagrammasi
 
 Servoni minimal, o'rta va maksimal pozitsiyalariga o'tkazing.
@@ -265,7 +265,7 @@ Robot rover
 
 Oddiy ikki g'ildirakli robot rover yasang.
 
-.. image:: ../images/robot_bb.svg
+.. image:: /images/robot_bb.svg
     :alt: Batareya paketi bilan ishlaydigan motor kontroller platasi orqali ikkita motorga ulangan Raspberry Pi Pico diagrammasi.
 
 Roverni 1 soniya davomida oldinga yurgazing va to'xtating:
@@ -288,7 +288,7 @@ Ultratovushli masofa sensori
 
 Ultratovushli masofa sensoridan (HC-SR04) masofani santimetrda oling:
 
-.. image:: ../images/distance_sensor_bb.svg
+.. image:: /images/distance_sensor_bb.svg
     :alt: HC-SR04 masofa sensoriga ulangan Raspberry Pi Pico diagrammasi.
 
 .. literalinclude:: ../examples/ultrasonic_distance_sensor.py
@@ -298,14 +298,14 @@ LCD displey
 
 I2C shinasi va PCF8574 I2C adapteridan foydalanib LiquidCrystal displeylarida (LCD) belgilarni chop eting.
 
-.. image:: ../images/i2c_lcd.png
+.. image:: /images/i2c_lcd.png
     :alt: I2C shinasi orqali 16x2 belgili LCD displeyga ulangan Raspberry Pi Pico diagrammasi.
 
 .. literalinclude:: ../examples/i2c_lcd.py
 
 Faqat GPIO pinlaridan foydalanib LiquidCrystal displeylarida (LCD) belgilarni chop eting.
 
-.. image:: ../images/lcd.png
+.. image:: /images/lcd.png
     :alt: 16x2 belgili LCD displeyga ulangan Raspberry Pi Pico diagrammasi.
 
 .. literalinclude:: ../examples/lcd.py
