@@ -51,15 +51,14 @@ templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 if MY_DOC_LANG == 'ko':
-    # 한국어 빌드 시: 영어 루트 파일들과 타 언어 폴더 제외
-    exclude_patterns.extend(['uz/**', 'index.rst']) 
+    # ko/** 를 제외하는 이유는 docs/ko/ 안에 있는 원본 파일과 
+    # 루트로 복사된 파일이 중복되어 경고가 뜨는 것을 막기 위함입니다.
+    exclude_patterns.extend(['uz/**', 'ko/**']) 
     language = 'ko'
 elif MY_DOC_LANG == 'uz':
-    # 우즈벡어 빌드 시: 영어 루트 파일들과 타 언어 폴더 제외
-    exclude_patterns.extend(['ko/**', 'index.rst'])
+    exclude_patterns.extend(['ko/**', 'uz/**'])
     language = 'uz'
 else:
-    # 영어(기본) 빌드 시: 하위 언어 폴더들 제외
     exclude_patterns.extend(['ko/**', 'uz/**'])
     language = 'en'
 

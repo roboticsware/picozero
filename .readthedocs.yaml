@@ -1,11 +1,10 @@
 version: 2
 
 build:
-  os: ubuntu-22.04
+  os: ubuntu-24.04
   tools:
     python: "3.10"
   jobs:
-    # 빌드 시작 전, 환경 변수에 맞는 폴더의 내용을 docs/ 루트로 복사합니다.
     pre_build:
       - |
         if [ "$MY_DOC_LANG" = "ko" ]; then
@@ -16,7 +15,7 @@ build:
 
 python:
   install:
-    - requirements: docs/requirements.txt  # 필요한 경우 수정
+    - requirements: docs/requirements.txt
     - method: pip
       path: .
 
