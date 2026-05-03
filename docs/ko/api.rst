@@ -63,6 +63,14 @@ Servo
     :inherited-members:
     :members: 
 
+스테퍼 모터 (Stepper)
+--------------------
+
+.. autoclass:: Stepper
+    :show-inheritance:
+    :inherited-members:
+    :members: 
+
 Motor
 -----
 
@@ -100,6 +108,22 @@ PWMOutputDevice
     :show-inheritance:
     :inherited-members:
     :members:
+
+모션 센서 (MotionSensor)
+-----------------------
+
+.. autoclass:: MotionSensor
+    :show-inheritance:
+    :inherited-members:
+    :members: 
+
+터치 센서 (TouchSensor)
+----------------------
+
+.. autoclass:: TouchSensor
+    :show-inheritance:
+    :inherited-members:
+    :members: 
 
 스위치 (Switch)
 --------------

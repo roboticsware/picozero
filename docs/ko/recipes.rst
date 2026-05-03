@@ -140,6 +140,28 @@ Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
 
 .. literalinclude:: ../examples/button_led.py
 
+터치 센서 (Touch sensor)
+----------------------
+
+정전식 터치 센서를 사용하여 터치를 감지합니다:
+
+.. literalinclude:: ../examples/touch_sensor.py
+
+콜백(callbacks)을 사용하여 터치 이벤트에 응답합니다:
+
+.. literalinclude:: ../examples/touch_sensor_callbacks.py
+
+모션 센서 (Motion sensor)
+-----------------------
+
+PIR(Passive Infrared) 센서를 사용하여 움직임을 감지합니다:
+
+.. literalinclude:: ../examples/motion_sensor.py
+
+콜백(callbacks)을 사용하여 모션 이벤트에 응답합니다:
+
+.. literalinclude:: ../examples/motion_sensor_callbacks.py
+
 RGB LED
 -------
 
@@ -271,6 +293,25 @@ LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 
 로버를 (대략) 사각형 모양으로 움직입니다:
 
 .. literalinclude:: ../examples/robot_rover_square.py
+
+스테퍼 모터 (Stepper motor)
+-------------------------
+
+드라이버 보드(예: ULN2003)를 통해 연결된 스테퍼 모터를 제어합니다.
+
+아날로그 시계
+~~~~~~~~~~~~
+
+계속해서 움직이는 아날로그 시계의 초침을 만듭니다:
+
+.. literalinclude:: ../examples/stepper_analog_clock.py
+
+자동 블라인드
+~~~~~~~~~~~~
+
+시간 기반 블라인드 컨트롤러:
+
+.. literalinclude:: ../examples/stepper_automatic_blinds.py
 
 내부 온도 센서
 -------------

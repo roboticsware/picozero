@@ -72,10 +72,25 @@ Thonny를 사용하여 picozero.py 복사하기
 .. image:: /images/thonny-view-files.jpg
     :alt: 보기 메뉴에서 선택된 파일 옵션
 
-picozero `GitHub 저장소`_를 클론하거나 `picozero.py`_ 파일에서 코드를 복사하여 메인 컴퓨터에 저장하십시오.
+picozero `GitHub 저장소`_를 클론하거나 `picozero.py`_ 파일을 다운로드하여 메인 컴퓨터에 저장하십시오.
+
+.. only:: html
+
+   .. raw:: html
+
+      <p>
+        <a href="https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py" download>
+          ⬇️ picozero.py 다운로드
+        </a>
+      </p>
+
+.. only:: not html
+
+   ``picozero.py`` 다운로드:
+   https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py
 
 .. _GitHub 저장소: https://github.com/roboticsware/picozero
-.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/refs/heads/main/picozero/picozero.py
+.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py
 
 Thonny에서 클론한 디렉토리 또는 파일을 저장한 위치로 이동하여 ``picozero.py`` 파일을 찾으십시오.
 

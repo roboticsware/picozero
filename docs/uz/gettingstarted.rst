@@ -72,7 +72,22 @@ Shu bilan bir qatorda, ``picozero.py`` faylini Raspberry Pi Pico-ga o'tkazish uc
 .. image:: /images/thonny-view-files.jpg
     :alt: View menyusidan tanlangan Files varianti
 
-picozero `GitHub repozitoriysi`_ni klonlang yoki `picozero.py`_ faylidan kodni nusxalab oling va uni asosiy kompyuteringizda saqlang.
+picozero `GitHub repozitoriysi`_ni klonlang yoki `picozero.py`_ faylini yuklab oling va uni asosiy kompyuteringizda saqlang.
+
+.. only:: html
+
+   .. raw:: html
+
+      <p>
+        <a href="https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py" download>
+          ⬇️ picozero.py-ni yuklab olish
+        </a>
+      </p>
+
+.. only:: not html
+
+   ``picozero.py``-ni yuklab olish:
+   https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py
 
 .. _GitHub repozitoriysi: https://github.com/roboticsware/picozero
 .. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/refs/heads/main/picozero/picozero.py

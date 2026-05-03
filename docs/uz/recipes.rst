@@ -144,6 +144,28 @@ Har safar :class:`Button` bosilganda funksiyani ishga tushirish:
 
 .. literalinclude:: ../examples/button_led.py
 
+Sensorli teginish (Touch sensor)
+--------------------------------
+
+Kapasitiv sensorli teginish datchigi yordamida teginishni aniqlash:
+
+.. literalinclude:: ../examples/touch_sensor.py
+
+Teginish hodisalariga javob berish uchun qayta chaqiruvlardan (callbacks) foydalanish:
+
+.. literalinclude:: ../examples/touch_sensor_callbacks.py
+
+Harakat sensori (Motion sensor)
+-------------------------------
+
+PIR (Passive Infrared) sensori yordamida harakatni aniqlash:
+
+.. literalinclude:: ../examples/motion_sensor.py
+
+Harakat hodisalariga javob berish uchun qayta chaqiruvlardan (callbacks) foydalanish:
+
+.. literalinclude:: ../examples/motion_sensor_callbacks.py
+
 RGB svetodiodlar
 ----------------
 
@@ -275,6 +297,25 @@ Roverni 1 soniya davomida oldinga yurgazing va to'xtating:
 Roverni (taxminan) kvadrat bo'ylab harakatlantiring:
 
 .. literalinclude:: ../examples/robot_rover_square.py
+
+Stepper motor (Stepper motor)
+-----------------------------
+
+Drayver platasi (masalan, ULN2003) orqali ulangan stepper motorni boshqarish.
+
+Analog soat
+~~~~~~~~~~~
+
+Uzluksiz ishlaydigan analog soatning soniya milini yaratish:
+
+.. literalinclude:: ../examples/stepper_analog_clock.py
+
+Avtomatik pardalar
+~~~~~~~~~~~~~~~~~~
+
+Vaqtga asoslangan parda boshqaruvchisi:
+
+.. literalinclude:: ../examples/stepper_automatic_blinds.py
 
 Ichki harorat sensori
 ---------------------
