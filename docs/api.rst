@@ -63,6 +63,14 @@ Servo
     :inherited-members:
     :members: 
 
+Stepper
+-------
+
+.. autoclass:: Stepper
+    :show-inheritance:
+    :inherited-members:
+    :members: 
+
 Motor
 -----
 
@@ -100,6 +108,22 @@ Button
     :show-inheritance:
     :inherited-members:
     :members:
+
+MotionSensor
+------------
+
+.. autoclass:: MotionSensor
+    :show-inheritance:
+    :inherited-members:
+    :members: 
+
+TouchSensor
+-----------
+
+.. autoclass:: TouchSensor
+    :show-inheritance:
+    :inherited-members:
+    :members: 
 
 Switch
 ------

@@ -145,6 +145,28 @@ Turn the :obj:`pico_led` on when a :class:`Button` is pressed and off when it is
 
 .. literalinclude:: examples/button_led.py
 
+Touch sensor
+------------
+
+Detect touch using a capacitive touch sensor:
+
+.. literalinclude:: examples/touch_sensor.py
+
+Use callbacks to respond to touch events:
+
+.. literalinclude:: examples/touch_sensor_callbacks.py
+
+Motion sensor
+-------------
+
+Detect motion using a PIR (Passive Infrared) sensor:
+
+.. literalinclude:: examples/motion_sensor.py
+
+Use callbacks to respond to motion events:
+
+.. literalinclude:: examples/motion_sensor_callbacks.py
+
 RGB LEDs
 --------
 
@@ -277,12 +299,44 @@ Move the rover (roughly) in a square:
 
 .. literalinclude:: examples/robot_rover_square.py
 
+
+Stepper motor
+-------------
+
+Control a stepper motor connected via a driver board (e.g. ULN2003).
+
+Analog clock
+~~~~~~~~~~~~
+
+Create a continuously-running analog clock second hand:
+
+.. literalinclude:: examples/stepper_analog_clock.py
+
+Automatic blinds
+~~~~~~~~~~~~~~~~
+
+Time-based blind controller:
+
+.. literalinclude:: examples/stepper_automatic_blinds.py
+
+
 Internal temperature sensor
 ---------------------------
 
 Check the internal temperature of the Raspberry Pi Pico in degrees Celcius:
 
 .. literalinclude:: examples/pico_temperature.py
+
+Motion sensor
+-------------
+
+Detect motion using a PIR (Passive Infrared) sensor:
+
+.. literalinclude:: examples/motion_sensor.py
+
+Use callbacks to respond to motion events:
+
+.. literalinclude:: examples/motion_sensor_callbacks.py
 
 Ultrasonic distance sensor
 --------------------------
