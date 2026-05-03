@@ -40,7 +40,7 @@ Thonny-da picozero-ni o'rnatish uchun **Tools** > **Manage packages...** ni tanl
 .. image:: /images/thonny-manage-packages.jpg
     :alt: Thonny-dagi Tools menyusidan Manage Packages-ni tanlash
 
-PyPI-dan `picozero` ni qidiring.
+PyPI-dan `picozero-rw` ni qidiring.
 
 .. image:: /images/thonny-packages-picozero.jpg
     :alt: Thonny-dagi Manage Packages oynasining Search maydoniga picozero kiritilgan holati
@@ -50,8 +50,8 @@ Paketni yuklab olish uchun **install** tugmasini bosing.
 .. image:: /images/thonny-install-package.jpg
     :alt: Manage Packages oynasida ko'rsatilgan picozero paketi haqida ma'lumot
 
-Qo'lda o'rnatish
-===============
+Thonny yordamida qo'lda o'rnatish
+================================
 
 picozero-ni ``picozero.py`` kodini Raspberry Pi Pico-ga nusxalash orqali ham o'rnatish mumkin.
 

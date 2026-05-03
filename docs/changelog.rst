@@ -2,12 +2,9 @@ Change log
 ==========
 
 .. currentmodule:: picozero
-0.4.2 ... 0.4.5
+0.6.2 - 2026-5-3
 ---------------
-+ Introduced ``I2cLcd`` class
-+ Introduced ``move_to_degree`` API for Servo
-+ Introduced ``raw_value`` property for AnalogOutput(ADC)
-+ Documentation tidy up and minor fixes
++ Merged from original picozero repo.
 
 0.6.1 - 2025-11-28
 -----------
@@ -36,6 +33,13 @@ Change log
 -----------
 
 + Introduced ``MotionSensor`` class for PIR sensors
+
+0.4.3 ... 0.4.5
+---------------
++ Introduced ``I2cLcd`` class
++ Introduced ``move_to_degree`` API for Servo
++ Introduced ``raw_value`` property for AnalogOutput(ADC)
++ Documentation tidy up and minor fixes
 
 0.4.2 - 2023-05-12
 ------------------

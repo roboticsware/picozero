@@ -40,7 +40,7 @@ Thonny 내에서 picozero를 설치하려면 **도구(Tools)** > **패키지 관
 .. image:: /images/thonny-manage-packages.jpg
     :alt: Thonny의 도구 메뉴에서 패키지 관리 선택
 
-PyPI에서 `picozero`를 검색하십시오.
+PyPI에서 `picozero-rw`를 검색하십시오.
 
 .. image:: /images/thonny-packages-picozero.jpg
     :alt: Thonny의 패키지 관리 창의 검색 상자에 입력된 picozero
@@ -50,8 +50,8 @@ PyPI에서 `picozero`를 검색하십시오.
 .. image:: /images/thonny-install-package.jpg
     :alt: 패키지 관리 창에 표시된 picozero 패키지 정보
 
-수동 설치
-========
+Thonny를 사용한 수동 설치
+=======================
 
 picozero는 ``picozero.py`` 코드를 Raspberry Pi Pico에 복사하여 설치할 수 있습니다.
 

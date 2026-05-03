@@ -53,7 +53,7 @@ copyright = "2025, Raspberry Pi Foundation"
 author = "Raspberry Pi Foundation"
 
 # The full version, including alpha/beta/rc tags
-release = "0.6.1"
+release = "0.6.2"
 
 # -- General configuration ---------------------------------------------------
 extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode", "sphinx.ext.intersphinx"]

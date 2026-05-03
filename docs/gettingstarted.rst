@@ -40,7 +40,7 @@ To install picozero within Thonny, select **Tools** > **Manage packages...**
 .. image:: /images/thonny-manage-packages.jpg
     :alt: Selecting Manage Packages from the Tools menu in Thonny
 
-Search for `picozero` on PyPI.
+Search for `picozero-rw` on PyPI.
 
 .. image:: /images/thonny-packages-picozero.jpg
     :alt: picozero entered in the Search box of the Manage Packages window in Thonny
@@ -50,8 +50,8 @@ Click on **install** to download the package.
 .. image:: /images/thonny-install-package.jpg
     :alt: Information about the picozero package shown in the Manage Packages window
 
-Manual install
-==============
+Manual install in Thonny
+========================
 
 picozero can be installed by copying the ``picozero.py`` code to your Raspberry Pi Pico.
 

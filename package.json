@@ -1,9 +1,14 @@
 {
   "urls": [
-    ["picozero/__init__.py", "github:roboticsware/picozero/picozero/__init__.py"],
-    ["picozero/picozero.py", "github:roboticsware/picozero/picozero/picozero.py"]
+    [
+      "picozero/__init__.py",
+      "github:roboticsware/picozero/picozero/__init__.py"
+    ],
+    [
+      "picozero/picozero.py",
+      "github:roboticsware/picozero/picozero/picozero.py"
+    ]
   ],
-  "deps": [
-  ],
-  "version": "0.6.1"
+  "deps": [],
+  "version": "0.6.2"
 }
