@@ -38,7 +38,7 @@ Pico LED
 
 Raspberry Pi Pico의 LED를 켜려면:
 
-.. literalinclude:: ../examples/pico_led.py
+.. literalinclude:: /examples/pico_led.py
 
 스크립트를 실행하여 LED가 켜지는지 확인하십시오.
 
@@ -53,7 +53,7 @@ Raspberry Pi Pico의 LED를 켜려면:
 
 핀과 핀 번호를 표시하는 Raspberry Pi Pico의 *다이어그램*을 출력할 수 있습니다.
 
-.. literalinclude:: ../examples/print_pinout.py
+.. literalinclude:: /examples/print_pinout.py
 
 ::
 
@@ -93,11 +93,11 @@ Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
 
 :class:`LED`를 켜고 끕니다:
 
-.. literalinclude:: ../examples/led_on_off.py
+.. literalinclude:: /examples/led_on_off.py
 
 :class:`LED`를 토글하여 켜짐 상태에서 꺼짐 상태로 또는 그 반대로 바꿉니다:
 
-.. literalinclude:: ../examples/led_toggle.py
+.. literalinclude:: /examples/led_toggle.py
 
 .. only:: html
 
@@ -111,22 +111,22 @@ Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
 
 또는 :meth:`~picozero.LED.blink` 메서드를 사용할 수 있습니다.
 
-.. literalinclude:: ../examples/led_blink.py
+.. literalinclude:: /examples/led_blink.py
 
 밝기 (Brightness)
 ~~~~~~~~~~~~~~~~
 
 :class:`LED`의 밝기를 설정합니다:
 
-.. literalinclude:: ../examples/led_brightness.py
+.. literalinclude:: /examples/led_brightness.py
 
 맥박 효과(pulse effect) 만들기:
 
-.. literalinclude:: ../examples/led_pulse.py
+.. literalinclude:: /examples/led_pulse.py
 
 또는 :meth:`~picozero.LED.pulse` 메서드를 사용할 수 있습니다.
 
-.. literalinclude:: ../examples/led_pulse_method.py
+.. literalinclude:: /examples/led_pulse_method.py
 
 버튼 (Buttons)
 --------------
@@ -135,12 +135,12 @@ Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
 
 :class:`Button`이 눌렸는지 확인하기:
 
-.. literalinclude:: ../examples/button_is_pressed.py
+.. literalinclude:: /examples/button_is_pressed.py
 
 
 :class:`Button`이 눌릴 때마다 함수 실행하기:
 
-.. literalinclude:: ../examples/button_function.py
+.. literalinclude:: /examples/button_function.py
 
 .. note::
 
@@ -148,40 +148,40 @@ Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
 
 :class:`Button`을 눌렀을 때 :obj:`pico_led`를 켜고 뗐을 때 끄기:
 
-.. literalinclude:: ../examples/button_led.py
+.. literalinclude:: /examples/button_led.py
 
 터치 센서 (Touch sensor)
 ----------------------
 
 정전식 터치 센서를 사용하여 터치를 감지합니다:
 
-.. literalinclude:: ../examples/touch_sensor.py
+.. literalinclude:: /examples/touch_sensor.py
 
 콜백(callbacks)을 사용하여 터치 이벤트에 응답합니다:
 
-.. literalinclude:: ../examples/touch_sensor_callbacks.py
+.. literalinclude:: /examples/touch_sensor_callbacks.py
 
 모션 센서 (Motion sensor)
 -----------------------
 
 PIR(Passive Infrared) 센서를 사용하여 움직임을 감지합니다:
 
-.. literalinclude:: ../examples/motion_sensor.py
+.. literalinclude:: /examples/motion_sensor.py
 
 콜백(callbacks)을 사용하여 모션 이벤트에 응답합니다:
 
-.. literalinclude:: ../examples/motion_sensor_callbacks.py
+.. literalinclude:: /examples/motion_sensor_callbacks.py
 
 RGB LED
 -------
 
 :class:`RGBLED`로 색상 설정하기:
 
-.. literalinclude:: ../examples/rgb_led.py
+.. literalinclude:: /examples/rgb_led.py
 
 :meth:`~picozero.RGBLED.toggle` 및 :meth:`~picozero.RGBLED.invert` 사용하기:
 
-.. literalinclude:: ../examples/rgb_toggle_invert.py
+.. literalinclude:: /examples/rgb_toggle_invert.py
 
 깜빡이기 (Blink)
 ~~~~~~~~~~~~~~~
@@ -190,28 +190,28 @@ RGB LED
 
 :meth:`~picozero.RGBLED.blink`가 정해진 횟수만큼 실행될지, 끝날 때까지 기다릴지, 아니면 다른 코드가 실행될 수 있도록 즉시 반환할지 제어할 수 있습니다.
 
-.. literalinclude:: ../examples/rgb_blink.py
+.. literalinclude:: /examples/rgb_blink.py
 
 맥박 (Pulse)
 ~~~~~~~~~~~
 
 LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 사용하십시오. 기본값은 빨간색과 꺼짐, 초록색과 꺼짐, 파란색과 꺼짐 사이를 맥박처럼 움직입니다. 
 
-.. literalinclude:: ../examples/rgb_pulse.py
+.. literalinclude:: /examples/rgb_pulse.py
 
 순환 (Cycle)
 ~~~~~~~~~~~
 
 :meth:`~picozero.RGBLED.cycle`의 기본값은 빨간색에서 초록색으로, 초록색에서 파란색으로, 파란색에서 빨간색으로 순환하는 것입니다. 
 
-.. literalinclude:: ../examples/rgb_cycle.py
+.. literalinclude:: /examples/rgb_cycle.py
 
 가변 저항 (Potentiometer)
 -------------------------
 
 가변 저항이 보고하는 값, 전압 및 퍼센트를 출력합니다:
 
-.. literalinclude:: ../examples/potentiometer.py
+.. literalinclude:: /examples/potentiometer.py
 
 .. note::
 
@@ -219,7 +219,7 @@ LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 
 
 가변 저항을 사용하여 LED의 밝기를 제어합니다:
 
-.. literalinclude:: ../examples/pot_led.py
+.. literalinclude:: /examples/pot_led.py
 
 조이스틱 (Joystick)
 ------------------
@@ -231,35 +231,35 @@ LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 
 
 조이스틱을 최소, 중간 및 최대 위치로 움직여 보십시오.
 
-.. literalinclude:: ../examples/joystick.py
+.. literalinclude:: /examples/joystick.py
 
 부저 (Buzzer)
 -------------
 
 전원이 공급될 때 음을 재생하는 능동 부저를 제어합니다:
 
-.. literalinclude:: ../examples/buzzer.py
+.. literalinclude:: /examples/buzzer.py
 
 스피커 (Speaker)
 ---------------
 
 다양한 톤이나 주파수를 재생할 수 있는 수동 부저나 스피커를 제어합니다:
 
-.. literalinclude:: ../examples/speaker.py
+.. literalinclude:: /examples/speaker.py
 
 멜로디 연주하기
 ~~~~~~~~~~~~~
 
 음 이름과 박자 길이를 사용하여 멜로디를 연주합니다: 
 
-.. literalinclude:: ../examples/speaker_tune.py
+.. literalinclude:: /examples/speaker_tune.py
 
 개별 음 연주하기
 ~~~~~~~~~~~~~~
 
 개별 음을 연주하고 타이밍을 제어하거나 다른 동작을 수행합니다:
 
-.. literalinclude:: ../examples/speaker_notes.py
+.. literalinclude:: /examples/speaker_notes.py
 
 서보 모터 (Servo)
 ---------------
@@ -271,22 +271,22 @@ LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 
 
 서보를 최소, 중간 및 최대 위치로 움직입니다.
 
-.. literalinclude:: ../examples/servo_move.py
+.. literalinclude:: /examples/servo_move.py
 
 서보를 최소 위치와 최대 위치 사이에서 맥박처럼 움직입니다.
 
-.. literalinclude:: ../examples/servo_pulse.py
+.. literalinclude:: /examples/servo_pulse.py
 
 서보를 최소 위치에서 최대 위치까지 100단계로 점진적으로 움직입니다.
 
-.. literalinclude:: ../examples/servo_sweep.py
+.. literalinclude:: /examples/servo_sweep.py
 
 모터 (Motor)
 -----------
 
 두 개의 핀(전진 및 후진)과 모터 드라이버 보드를 통해 연결된 모터를 움직입니다:
 
-.. literalinclude:: ../examples/motor_move.py
+.. literalinclude:: /examples/motor_move.py
 
 로봇 로버 (Robot rover)
 ---------------------
@@ -298,11 +298,11 @@ LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 
 
 로버를 1초 동안 앞으로 움직이고 멈춥니다:
 
-.. literalinclude:: ../examples/robot_rover_forward.py
+.. literalinclude:: /examples/robot_rover_forward.py
 
 로버를 (대략) 사각형 모양으로 움직입니다:
 
-.. literalinclude:: ../examples/robot_rover_square.py
+.. literalinclude:: /examples/robot_rover_square.py
 
 스테퍼 모터 (Stepper motor)
 -------------------------
@@ -314,21 +314,21 @@ LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 
 
 계속해서 움직이는 아날로그 시계의 초침을 만듭니다:
 
-.. literalinclude:: ../examples/stepper_analog_clock.py
+.. literalinclude:: /examples/stepper_analog_clock.py
 
 자동 블라인드
 ~~~~~~~~~~~~
 
 시간 기반 블라인드 컨트롤러:
 
-.. literalinclude:: ../examples/stepper_automatic_blinds.py
+.. literalinclude:: /examples/stepper_automatic_blinds.py
 
 내부 온도 센서
 -------------
 
 Raspberry Pi Pico의 내부 온도를 섭씨 단위로 확인합니다:
 
-.. literalinclude:: ../examples/pico_temperature.py
+.. literalinclude:: /examples/pico_temperature.py
 
 초음파 거리 센서
 ---------------
@@ -338,7 +338,7 @@ Raspberry Pi Pico의 내부 온도를 섭씨 단위로 확인합니다:
 .. image:: /images/distance_sensor_bb.svg
     :alt: HC-SR04 거리 센서에 연결된 Raspberry Pi Pico 다이어그램.
 
-.. literalinclude:: ../examples/ultrasonic_distance_sensor.py
+.. literalinclude:: /examples/ultrasonic_distance_sensor.py
 
 LCD 디스플레이
 --------------
@@ -348,11 +348,11 @@ I2C 버스와 PCF8574 I2C 어댑터를 사용하여 LiquidCrystal 디스플레�
 .. image:: /images/i2c_lcd.png
     :alt: I2C 버스를 통해 16x2 캐릭터 LCD 디스플레이에 연결된 Raspberry Pi Pico 다이어그램.
 
-.. literalinclude:: ../examples/i2c_lcd.py
+.. literalinclude:: /examples/i2c_lcd.py
 
 GPIO 핀만 사용하여 LiquidCrystal 디스플레이(LCD)에 문자를 출력합니다.
 
 .. image:: /images/lcd.png
     :alt: 16x2 캐릭터 LCD 디스플레이에 연결된 Raspberry Pi Pico 다이어그램.
 
-.. literalinclude:: ../examples/lcd.py
+.. literalinclude:: /examples/lcd.py

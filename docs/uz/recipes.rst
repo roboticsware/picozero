@@ -38,7 +38,7 @@ Pico LED
 
 Raspberry Pi Pico-dagi LED-ni yoqish uchun:
 
-.. literalinclude:: ../examples/pico_led.py
+.. literalinclude:: /examples/pico_led.py
 
 LED yonganini ko'rish uchun skriptingizni ishga tushiring.
 
@@ -53,7 +53,7 @@ Pinlar xaritasi (Pin out)
 
 Siz Raspberry Pi Pico-ning pinlari va ularning raqamlarini ko'rsatadigan *diagrammasini* chiqarishingiz mumkin.
 
-.. literalinclude:: ../examples/print_pinout.py
+.. literalinclude:: /examples/print_pinout.py
 
 ::
 
@@ -93,11 +93,11 @@ Miltillash
 
 :class:`LED`-ni yoqish va o'chirish:
 
-.. literalinclude:: ../examples/led_on_off.py
+.. literalinclude:: /examples/led_on_off.py
 
 :class:`LED`-ni yoqilganidan o'chirilganiga yoki o'chirilganidan yoqilganiga o'tkazish (toggle):
 
-.. literalinclude:: ../examples/led_toggle.py
+.. literalinclude:: /examples/led_toggle.py
 
 .. only:: html
 
@@ -111,22 +111,22 @@ Miltillash
 
 Shu bilan bir qatorda, :meth:`~picozero.LED.blink` metodidan foydalanishingiz mumkin.
 
-.. literalinclude:: ../examples/led_blink.py
+.. literalinclude:: /examples/led_blink.py
 
 Yorqinlik
 ~~~~~~~~~
 
 :class:`LED`-ning yorqinligini o'rnatish:
 
-.. literalinclude:: ../examples/led_brightness.py
+.. literalinclude:: /examples/led_brightness.py
 
 Puls effekti yaratish:
 
-.. literalinclude:: ../examples/led_pulse.py
+.. literalinclude:: /examples/led_pulse.py
 
 Shu bilan bir qatorda, :meth:`~picozero.LED.pulse` metodidan foydalanishingiz mumkin.
 
-.. literalinclude:: ../examples/led_pulse_method.py
+.. literalinclude:: /examples/led_pulse_method.py
 
 Tugmalar
 --------
@@ -135,12 +135,12 @@ Raspberry Pi Pico-ga tugmalar va kalitlarni ulashingiz hamda ular bosilganligini
 
 :class:`Button` bosilganligini tekshirish:
 
-.. literalinclude:: ../examples/button_is_pressed.py
+.. literalinclude:: /examples/button_is_pressed.py
 
 
 Har safar :class:`Button` bosilganda funksiyani ishga tushirish:
 
-.. literalinclude:: ../examples/button_function.py
+.. literalinclude:: /examples/button_function.py
 
 .. note::
 
@@ -152,40 +152,40 @@ Har safar :class:`Button` bosilganda funksiyani ishga tushirish:
 
 :class:`Button` bosilganda :obj:`pico_led`-ni yoqish va qo'yib yuborilganda o'chirish:
 
-.. literalinclude:: ../examples/button_led.py
+.. literalinclude:: /examples/button_led.py
 
 Sensorli teginish (Touch sensor)
 --------------------------------
 
 Kapasitiv sensorli teginish datchigi yordamida teginishni aniqlash:
 
-.. literalinclude:: ../examples/touch_sensor.py
+.. literalinclude:: /examples/touch_sensor.py
 
 Teginish hodisalariga javob berish uchun qayta chaqiruvlardan (callbacks) foydalanish:
 
-.. literalinclude:: ../examples/touch_sensor_callbacks.py
+.. literalinclude:: /examples/touch_sensor_callbacks.py
 
 Harakat sensori (Motion sensor)
 -------------------------------
 
 PIR (Passive Infrared) sensori yordamida harakatni aniqlash:
 
-.. literalinclude:: ../examples/motion_sensor.py
+.. literalinclude:: /examples/motion_sensor.py
 
 Harakat hodisalariga javob berish uchun qayta chaqiruvlardan (callbacks) foydalanish:
 
-.. literalinclude:: ../examples/motion_sensor_callbacks.py
+.. literalinclude:: /examples/motion_sensor_callbacks.py
 
 RGB svetodiodlar
 ----------------
 
 :class:`RGBLED` yordamida ranglarni o'rnatish:
 
-.. literalinclude:: ../examples/rgb_led.py
+.. literalinclude:: /examples/rgb_led.py
 
 :meth:`~picozero.RGBLED.toggle` va :meth:`~picozero.RGBLED.invert`-dan foydalanish:
 
-.. literalinclude:: ../examples/rgb_toggle_invert.py
+.. literalinclude:: /examples/rgb_toggle_invert.py
 
 Blink (Miltillash)
 ~~~~~~~~~~~~~~~~~~
@@ -194,28 +194,28 @@ Ranglar o'rtasida almashish uchun :meth:`~picozero.RGBLED.blink` metodidan foyda
 
 Siz :meth:`~picozero.RGBLED.blink` ma'lum bir marta ishlashini va u tugaguncha kutishni yoki boshqa kodlar ishlashi uchun darhol qaytishini boshqarishingiz mumkin.
 
-.. literalinclude:: ../examples/rgb_blink.py
+.. literalinclude:: /examples/rgb_blink.py
 
 Pulse (Puls)
 ~~~~~~~~~~~~
 
 LED rangini asta-sekin o'zgartirish uchun :meth:`~picozero.RGBLED.pulse`-dan foydalaning. Standart bo'yicha u qizil va o'chirilgan, keyin yashil va o'chirilgan, keyin ko'k va o'chirilgan ranglar orasida puls beradi. 
 
-.. literalinclude:: ../examples/rgb_pulse.py
+.. literalinclude:: /examples/rgb_pulse.py
 
 Cycle (Sikl)
 ~~~~~~~~~~~~
 
 :meth:`~picozero.RGBLED.cycle` uchun standart ranglar qizildan yashilga, yashildan ko'kka, keyin ko'kdan qizilga sikl bo'lib aylanadi. 
 
-.. literalinclude:: ../examples/rgb_cycle.py
+.. literalinclude:: /examples/rgb_cycle.py
 
 Potensiometr
 ------------
 
 Potensiometr tomonidan bildirilgan qiymat, kuchlanish va foizni chop etish:
 
-.. literalinclude:: ../examples/potentiometer.py
+.. literalinclude:: /examples/potentiometer.py
 
 .. note::
 
@@ -223,7 +223,7 @@ Potensiometr tomonidan bildirilgan qiymat, kuchlanish va foizni chop etish:
 
 LED yorqinligini boshqarish uchun potensiometrdan foydalanish:
 
-.. literalinclude:: ../examples/pot_led.py
+.. literalinclude:: /examples/pot_led.py
 
 Joystik
 -------
@@ -235,35 +235,35 @@ Joystik potensiometrga o'xshaydi, shuning uchun joystikni boshqarish uchun Pot k
 
 Joystikni minimal, o'rta va maksimal pozitsiyalariga o'tkazing.
 
-.. literalinclude:: ../examples/joystick.py
+.. literalinclude:: /examples/joystick.py
 
 Buzzer
 ------
 
 Quvvat berilganda nota chalinadigan aktiv buzzerni boshqarish:
 
-.. literalinclude:: ../examples/buzzer.py
+.. literalinclude:: /examples/buzzer.py
 
 Dinamik (Speaker)
 -----------------
 
 Turli xil tonlar yoki chastotalarni chala oladigan passiv buzzer yoki dinamikni boshqarish:
 
-.. literalinclude:: ../examples/speaker.py
+.. literalinclude:: /examples/speaker.py
 
 Kuyni chalish
 ~~~~~~~~~~~~~
 
 Nota nomlari va davomiyliklaridan (bitlarda) iborat kuyni chalish: 
 
-.. literalinclude:: ../examples/speaker_tune.py
+.. literalinclude:: /examples/speaker_tune.py
 
 Alohida notalarni chalish
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Alohida notalarni chaling va vaqtni boshqaring yoki boshqa harakatni bajaring:
 
-.. literalinclude:: ../examples/speaker_notes.py
+.. literalinclude:: /examples/speaker_notes.py
 
 Servo
 -----
@@ -275,22 +275,22 @@ Bitta pin, 3.3v va yerga (ground) ulangan servo motor.
 
 Servoni minimal, o'rta va maksimal pozitsiyalariga o'tkazing.
 
-.. literalinclude:: ../examples/servo_move.py
+.. literalinclude:: /examples/servo_move.py
 
 Servoni minimal va maksimal pozitsiyalari orasida puls qiling.
 
-.. literalinclude:: ../examples/servo_pulse.py
+.. literalinclude:: /examples/servo_pulse.py
 
 Servoni minimaldan maksimal pozitsiyaga 100 ta qadam bilan asta-sekin o'tkazing.
 
-.. literalinclude:: ../examples/servo_sweep.py
+.. literalinclude:: /examples/servo_sweep.py
 
 Motor
 -----
 
 Ikkita pin (old va orqa) va motor kontroller platasi orqali ulangan motorni boshqarish:
 
-.. literalinclude:: ../examples/motor_move.py
+.. literalinclude:: /examples/motor_move.py
 
 Robot rover
 -----------
@@ -302,11 +302,11 @@ Oddiy ikki g'ildirakli robot rover yasang.
 
 Roverni 1 soniya davomida oldinga yurgazing va to'xtating:
 
-.. literalinclude:: ../examples/robot_rover_forward.py
+.. literalinclude:: /examples/robot_rover_forward.py
 
 Roverni (taxminan) kvadrat bo'ylab harakatlantiring:
 
-.. literalinclude:: ../examples/robot_rover_square.py
+.. literalinclude:: /examples/robot_rover_square.py
 
 Stepper motor (Stepper motor)
 -----------------------------
@@ -318,21 +318,21 @@ Analog soat
 
 Uzluksiz ishlaydigan analog soatning soniya milini yaratish:
 
-.. literalinclude:: ../examples/stepper_analog_clock.py
+.. literalinclude:: /examples/stepper_analog_clock.py
 
 Avtomatik pardalar
 ~~~~~~~~~~~~~~~~~~
 
 Vaqtga asoslangan parda boshqaruvchisi:
 
-.. literalinclude:: ../examples/stepper_automatic_blinds.py
+.. literalinclude:: /examples/stepper_automatic_blinds.py
 
 Ichki harorat sensori
 ---------------------
 
 Raspberry Pi Pico-ning ichki haroratini Selsiy darajasida tekshiring:
 
-.. literalinclude:: ../examples/pico_temperature.py
+.. literalinclude:: /examples/pico_temperature.py
 
 Ultratovushli masofa sensori
 ----------------------------
@@ -342,7 +342,7 @@ Ultratovushli masofa sensoridan (HC-SR04) masofani santimetrda oling:
 .. image:: /images/distance_sensor_bb.svg
     :alt: HC-SR04 masofa sensoriga ulangan Raspberry Pi Pico diagrammasi.
 
-.. literalinclude:: ../examples/ultrasonic_distance_sensor.py
+.. literalinclude:: /examples/ultrasonic_distance_sensor.py
 
 LCD displey
 -----------
@@ -352,11 +352,11 @@ I2C shinasi va PCF8574 I2C adapteridan foydalanib LiquidCrystal displeylarida (L
 .. image:: /images/i2c_lcd.png
     :alt: I2C shinasi orqali 16x2 belgili LCD displeyga ulangan Raspberry Pi Pico diagrammasi.
 
-.. literalinclude:: ../examples/i2c_lcd.py
+.. literalinclude:: /examples/i2c_lcd.py
 
 Faqat GPIO pinlaridan foydalanib LiquidCrystal displeylarida (LCD) belgilarni chop eting.
 
 .. image:: /images/lcd.png
     :alt: 16x2 belgili LCD displeyga ulangan Raspberry Pi Pico diagrammasi.
 
-.. literalinclude:: ../examples/lcd.py
+.. literalinclude:: /examples/lcd.py
