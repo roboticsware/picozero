@@ -91,11 +91,11 @@ Raspberry Pi Pico yordamida tashqi svetodiodlarni (LED) boshqarishingiz mumkin.
 Miltillash
 ~~~~~~~~~~
 
-:class:`LED`-ni yoqish va o'chirish:
+:class:`LED`\ -ni yoqish va o'chirish:
 
 .. literalinclude:: /examples/led_on_off.py
 
-:class:`LED`-ni yoqilganidan o'chirilganiga yoki o'chirilganidan yoqilganiga o'tkazish (toggle):
+:class:`LED`\ -ni yoqilganidan o'chirilganiga yoki o'chirilganidan yoqilganiga o'tkazish (toggle):
 
 .. literalinclude:: /examples/led_toggle.py
 
@@ -150,7 +150,7 @@ Har safar :class:`Button` bosilganda funksiyani ishga tushirish:
     ``when_pressed`` harakatini :data:`None`-ga o'rnatadi (bu funksiyaning qaytarish qiymati), 
     bu esa tugma bosilganda hech narsa sodir bo'lmasligini anglatadi.
 
-:class:`Button` bosilganda :obj:`pico_led`-ni yoqish va qo'yib yuborilganda o'chirish:
+:class:`Button` bosilganda :obj:`pico_led`\ -ni yoqish va qo'yib yuborilganda o'chirish:
 
 .. literalinclude:: /examples/button_led.py
 
@@ -199,7 +199,7 @@ Siz :meth:`~picozero.RGBLED.blink` ma'lum bir marta ishlashini va u tugaguncha k
 Pulse (Puls)
 ~~~~~~~~~~~~
 
-LED rangini asta-sekin o'zgartirish uchun :meth:`~picozero.RGBLED.pulse`-dan foydalaning. Standart bo'yicha u qizil va o'chirilgan, keyin yashil va o'chirilgan, keyin ko'k va o'chirilgan ranglar orasida puls beradi. 
+LED rangini asta-sekin o'zgartirish uchun :meth:`~picozero.RGBLED.pulse`\ -dan foydalaning. Standart bo'yicha u qizil va o'chirilgan, keyin yashil va o'chirilgan, keyin ko'k va o'chirilgan ranglar orasida puls beradi. 
 
 .. literalinclude:: /examples/rgb_pulse.py
 

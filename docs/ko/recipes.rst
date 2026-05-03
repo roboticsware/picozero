@@ -14,7 +14,7 @@ picozero를 사용하려면 스크립트 맨 위에 `import` 줄을 추가해야
 
     from picozero import pico_led, LED
 
-이제 스크립트에서 :obj:`~picozero.pico_led`와 :class:`~picozero.LED`를 사용할 수 있습니다::
+이제 스크립트에서 :obj:`~picozero.pico_led`\ 와 :class:`~picozero.LED`\ 를 사용할 수 있습니다::
 
     pico_led.on() # Raspberry Pi Pico의 내장 LED 켜기
     led = LED(14) # GP14 핀에 연결된 LED 제어 
@@ -42,11 +42,11 @@ Raspberry Pi Pico의 LED를 켜려면:
 
 스크립트를 실행하여 LED가 켜지는지 확인하십시오.
 
-:obj:`pico_led`를 사용하는 것은 다음과 동일합니다::
+:obj:`pico_led`\ 를 사용하는 것은 다음과 동일합니다::
 
     pico_led = LED(25) 
 
-:obj:`pico_led`는 :class:`LED`를 사용하여 만든 외부 LED와 동일한 방식으로 사용할 수 있습니다.
+:obj:`pico_led`\ 는 :class:`LED`\ 를 사용하여 만든 외부 LED와 동일한 방식으로 사용할 수 있습니다.
 
 핀 배열 (Pin out)
 -----------------
@@ -91,11 +91,11 @@ Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
 깜빡이기 (Flash)
 ~~~~~~~~~~~~~~
 
-:class:`LED`를 켜고 끕니다:
+:class:`LED`\ 를 켜고 끕니다:
 
 .. literalinclude:: /examples/led_on_off.py
 
-:class:`LED`를 토글하여 켜짐 상태에서 꺼짐 상태로 또는 그 반대로 바꿉니다:
+:class:`LED`\ 를 토글하여 켜짐 상태에서 꺼짐 상태로 또는 그 반대로 바꿉니다:
 
 .. literalinclude:: /examples/led_toggle.py
 
@@ -116,7 +116,7 @@ Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
 밝기 (Brightness)
 ~~~~~~~~~~~~~~~~
 
-:class:`LED`의 밝기를 설정합니다:
+:class:`LED`\ 의 밝기를 설정합니다:
 
 .. literalinclude:: /examples/led_brightness.py
 
@@ -133,12 +133,12 @@ Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
 
 버튼과 스위치를 Raspberry Pi Pico에 연결하고 눌렸을 때를 감지할 수 있습니다. 
 
-:class:`Button`이 눌렸는지 확인하기:
+:class:`Button`\ 이 눌렸는지 확인하기:
 
 .. literalinclude:: /examples/button_is_pressed.py
 
 
-:class:`Button`이 눌릴 때마다 함수 실행하기:
+:class:`Button`\ 이 눌릴 때마다 함수 실행하기:
 
 .. literalinclude:: /examples/button_function.py
 
@@ -146,7 +146,7 @@ Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
 
     ``button.when_pressed = led_on_off`` 줄은 ``led_on_off`` 함수를 즉시 실행하는 것이 아니라, 버튼이 눌렸을 때 호출될 함수에 대한 참조를 생성합니다. 실수로 ``button.when_pressed = led_on_off()``를 사용하면 ``when_pressed`` 동작이 :data:`None`(이 함수의 반환 값)으로 설정되어 버튼을 눌러도 아무 일도 일어나지 않습니다.
 
-:class:`Button`을 눌렀을 때 :obj:`pico_led`를 켜고 뗐을 때 끄기:
+:class:`Button`을 눌렀을 때 :obj:`pico_led`\ 를 켜고 뗐을 때 끄기:
 
 .. literalinclude:: /examples/button_led.py
 
@@ -175,7 +175,7 @@ PIR(Passive Infrared) 센서를 사용하여 움직임을 감지합니다:
 RGB LED
 -------
 
-:class:`RGBLED`로 색상 설정하기:
+:class:`RGBLED`\ 로 색상 설정하기:
 
 .. literalinclude:: /examples/rgb_led.py
 
@@ -186,7 +186,7 @@ RGB LED
 깜빡이기 (Blink)
 ~~~~~~~~~~~~~~~
 
-색상 사이를 변경하려면 :meth:`~picozero.RGBLED.blink`를 사용하십시오. 어떤 색상을 사용할지, 각 색상이 얼마나 유지될지 제어할 수 있습니다. 색상 `(0, 0, 0)`은 꺼짐을 의미합니다. 
+색상 사이를 변경하려면 :meth:`~picozero.RGBLED.blink`\ 를 사용하십시오. 어떤 색상을 사용할지, 각 색상이 얼마나 유지될지 제어할 수 있습니다. 색상 `(0, 0, 0)`은 꺼짐을 의미합니다. 
 
 :meth:`~picozero.RGBLED.blink`가 정해진 횟수만큼 실행될지, 끝날 때까지 기다릴지, 아니면 다른 코드가 실행될 수 있도록 즉시 반환할지 제어할 수 있습니다.
 
@@ -195,14 +195,14 @@ RGB LED
 맥박 (Pulse)
 ~~~~~~~~~~~
 
-LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 사용하십시오. 기본값은 빨간색과 꺼짐, 초록색과 꺼짐, 파란색과 꺼짐 사이를 맥박처럼 움직입니다. 
+LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`\ 를 사용하십시오. 기본값은 빨간색과 꺼짐, 초록색과 꺼짐, 파란색과 꺼짐 사이를 맥박처럼 움직입니다. 
 
 .. literalinclude:: /examples/rgb_pulse.py
 
 순환 (Cycle)
 ~~~~~~~~~~~
 
-:meth:`~picozero.RGBLED.cycle`의 기본값은 빨간색에서 초록색으로, 초록색에서 파란색으로, 파란색에서 빨간색으로 순환하는 것입니다. 
+:meth:`~picozero.RGBLED.cycle`\ 의 기본값은 빨간색에서 초록색으로, 초록색에서 파란색으로, 파란색에서 빨간색으로 순환하는 것입니다. 
 
 .. literalinclude:: /examples/rgb_cycle.py
 
@@ -215,7 +215,7 @@ LED 색상을 점진적으로 변경하려면 :meth:`~picozero.RGBLED.pulse`를 
 
 .. note::
 
-    Thonny Python 에디터에서 **보기(View)** > **플로터(Plotter)**를 선택하면 :meth:`print`의 출력을 그래프로 볼 수 있습니다. 
+    Thonny Python 에디터에서 **보기(View)** > **플로터(Plotter)**를 선택하면 :meth:`print`\ 의 출력을 그래프로 볼 수 있습니다. 
 
 가변 저항을 사용하여 LED의 밝기를 제어합니다:
 
