@@ -99,6 +99,16 @@ Toggle an :class:`LED` to turn it from on to off or off to on:
 
 .. literalinclude:: examples/led_toggle.py
 
+.. only:: html
+
+   .. raw:: html
+
+      <p>
+        <a href="https://wokwi.com/projects/417606412375790593" target="_blank">
+          🚀 Run in Wokwi Simulator
+        </a>
+      </p>
+
 Alternatively, you can use the :meth:`~picozero.LED.blink` method.
 
 .. literalinclude:: examples/led_blink.py

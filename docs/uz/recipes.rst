@@ -99,6 +99,16 @@ Miltillash
 
 .. literalinclude:: ../examples/led_toggle.py
 
+.. only:: html
+
+   .. raw:: html
+
+      <p>
+        <a href="https://wokwi.com/projects/417606412375790593" target="_blank">
+          🚀 Wokwi simulyatorida ishga tushirish
+        </a>
+      </p>
+
 Shu bilan bir qatorda, :meth:`~picozero.LED.blink` metodidan foydalanishingiz mumkin.
 
 .. literalinclude:: ../examples/led_blink.py

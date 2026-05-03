@@ -99,6 +99,16 @@ Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
 
 .. literalinclude:: ../examples/led_toggle.py
 
+.. only:: html
+
+   .. raw:: html
+
+      <p>
+        <a href="https://wokwi.com/projects/417606412375790593" target="_blank">
+          🚀 Wokwi 시뮬레이터에서 실행하기
+        </a>
+      </p>
+
 또는 :meth:`~picozero.LED.blink` 메서드를 사용할 수 있습니다.
 
 .. literalinclude:: ../examples/led_blink.py
