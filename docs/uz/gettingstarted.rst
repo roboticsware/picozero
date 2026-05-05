@@ -6,6 +6,60 @@
 Ishni boshlash
 =============
 
+Mu yordamida o'rnatish
+=====================
+
+Talablar
+--------
+
+Windows yoki macOS kompyuteri ( `Mu Editor`_ o'rnatilgan).
+
+.. _Mu Editor: https://github.com/roboticsware/mu/releases/latest
+
+MicroPython rejimini tanlash
+---------------------------
+
+Mu-ni oching va yuqori chap burchakdagi **Rejim** tugmasini bosing. **RPi Pico**-ni tanlang va **OK** tugmasini bosing.
+
+.. image:: /images/mu-select-mode.jpg
+    :alt: Mu Editor-da RPi Pico rejimini tanlash
+
+Mu-da PyPI-dan picozero-ni o'rnatish
+------------------------------------
+
+Mu-da picozero-rw ni o'rnatish uchun **MicroPython paketlari** tugmasini bosing.
+
+.. image:: /images/mu-packages-button.jpg
+    :alt: Mu-dagi MicroPython paketlari bo'limini tanlash
+
+`picozero-rw` ni qidiring va **Qidirish** tugmasini bosing.
+
+.. image:: /images/mu-search-picozero.jpg
+    :alt: Mu paket menejerida picozero-rw ni qidirish
+
+Paketni yuklab olish va qurilmangizga o'rnatish uchun **O'rnatish** tugmasini bosing.
+
+.. image:: /images/mu-install-package.jpg
+    :alt: Mu paket menejerida o'rnatish tugmasini bosish
+
+Mu yordamida qo'lda o'rnatish
+============================
+
+picozero-ni Mu fayl menejeri yordamida ``picozero.py`` kodini Raspberry Pi Pico-ga nusxalash orqali o'rnatish mumkin.
+
+Fayl menejerini ochish uchun **Fayllar** tugmasini bosing.
+
+.. image:: /images/mu-files-button.jpg
+    :alt: Mu-dagi Fayllar tugmasini bosish
+
+Mu-dagi **Kompyuteringizdagi fayllar** oynasidan ``pico_lib`` papkasi ichidagi ``picozero.py`` faylini toping. Uni **Files on your device** oynasiga sudrab olib o'ting (drag and drop).
+
+.. image:: /images/mu-drag-and-drop.jpg
+    :alt: Mu-da picozero.py faylini kompyuterdan qurilmaga sudrab olib qo'yish
+
+Ishni boshlash
+=============
+
 Thonny orqali o'rnatish
 ======================
 

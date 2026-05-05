@@ -6,6 +6,57 @@
 Getting started
 ===============
 
+Install using Mu
+================
+
+Requirements
+------------
+
+A Windows or macOS computer with the `Mu Editor`_ installed.
+
+.. _Mu Editor: https://github.com/roboticsware/mu/releases/latest
+
+Select the MicroPython mode
+---------------------------
+
+Open Mu and click on the **Mode** button in the top left. Select **RPi Pico** and click **OK**.
+
+.. image:: /images/mu-select-mode.jpg
+    :alt: Selecting RPi Pico mode in Mu Editor
+
+Install picozero from PyPI in Mu
+--------------------------------
+
+To install picozero-rw within Mu, click on the **Packages** button.
+
+.. image:: /images/mu-packages-button.jpg
+    :alt: Clicking the Packages button in Mu
+
+Search for `picozero-rw` and click **Search**.
+
+.. image:: /images/mu-search-picozero.jpg
+    :alt: Searching for picozero-rw in Mu package manager
+
+Click on **Install** to download and install the package to your device.
+
+.. image:: /images/mu-install-package.jpg
+    :alt: Clicking install in Mu package manager
+
+Manual install in Mu
+====================
+
+picozero can be installed by copying the ``picozero.py`` code to your Raspberry Pi Pico using Mu's file manager.
+
+Click on the **Files** button to open the file manager.
+
+.. image:: /images/mu-files-button.jpg
+    :alt: Clicking the Files button in Mu
+
+In Mu, find the ``picozero.py`` file inside the ``pico_lib`` folder in the **Files on your computer** pane. Drag and drop it to the **Files on your device** pane.
+
+.. image:: /images/mu-drag-and-drop.jpg
+    :alt: Drag and drop picozero.py from computer to device in Mu
+
 Install using Thonny
 ====================
 
