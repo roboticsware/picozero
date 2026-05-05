@@ -12,14 +12,14 @@ Mu yordamida o'rnatish
 Talablar
 --------
 
-Windows yoki macOS kompyuteri ( `Mu Editor`_ o'rnatilgan).
+Windows yoki macOS kompyuteri (`Mu Editor`_\ o'rnatilgan).
 
 .. _Mu Editor: https://github.com/roboticsware/mu/releases/latest
 
 MicroPython rejimini tanlash
 ---------------------------
 
-Mu-ni oching va yuqori chap burchakdagi **Rejim** tugmasini bosing. **RPi Pico**-ni tanlang va **OK** tugmasini bosing.
+Mu-ni oching va yuqori chap burchakdagi **Rejim** tugmasini bosing. **RPi Pico**\ -ni tanlang va **OK** tugmasini bosing.
 
 .. image:: /images/mu-select-mode.jpg
     :alt: Mu Editor-da RPi Pico rejimini tanlash
@@ -32,7 +32,7 @@ Mu-da picozero-rw ni o'rnatish uchun **MicroPython paketlari** tugmasini bosing.
 .. image:: /images/mu-packages-button.jpg
     :alt: Mu-dagi MicroPython paketlari bo'limini tanlash
 
-`picozero-rw` ni qidiring va **Qidirish** tugmasini bosing.
+`picozero-rw`\ ni qidiring va **Qidirish** tugmasini bosing.
 
 .. image:: /images/mu-search-picozero.jpg
     :alt: Mu paket menejerida picozero-rw ni qidirish
@@ -70,11 +70,11 @@ Talablar
 
 .. _Thonny Python IDE: https://thonny.org/
 
-Thonny-ni qanday o'rnatish haqida ma'lumotni `Raspberry Pi Pico-ga kirish qo'llanmasi`_dan topishingiz mumkin.
+Thonny-ni qanday o'rnatish haqida ma'lumotni `Raspberry Pi Pico-ga kirish qo'llanmasi`_\ dan topishingiz mumkin.
 
 .. _Raspberry Pi Pico-ga kirish qo'llanmasi: https://learning-admin.raspberrypi.org/en/projects/introduction-to-the-pico/2
 
-Thonny o'rnatilgandan so'ng, siz oxirgi MicroPython proshivkasidan foydalanayotganingizga ishonch hosil qilishingiz kerak. Raspberry Pi Pico MicroPython proshivkasini o'rnatish yoki yangilash haqida batafsil ma'lumotni `Pico qo'llanmasi`_dan topishingiz mumkin.
+Thonny o'rnatilgandan so'ng, siz oxirgi MicroPython proshivkasidan foydalanayotganingizga ishonch hosil qilishingiz kerak. Raspberry Pi Pico MicroPython proshivkasini o'rnatish yoki yangilash haqida batafsil ma'lumotni `Pico qo'llanmasi`_\ dan topishingiz mumkin.
 
 .. _Pico qo'llanmasi: https://learning-admin.raspberrypi.org/en/projects/introduction-to-the-pico/3
 
@@ -109,7 +109,7 @@ Thonny yordamida qo'lda o'rnatish
 
 picozero-ni ``picozero.py`` kodini Raspberry Pi Pico-ga nusxalash orqali ham o'rnatish mumkin.
 
-picozero `GitHub repozitoriysi`_ni klonlang yoki `picozero.py`_ faylidan kodni nusxalab oling va uni asosiy kompyuteringizda saqlang.
+picozero `GitHub repozitoriysi`_\ ni klonlang yoki `picozero.py`_\ ni yuklab oling va uni asosiy kompyuterda saqlang.
 
 .. _GitHub repozitoriysi: https://github.com/roboticsware/picozero
 .. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/refs/heads/main/picozero/picozero.py
@@ -126,7 +126,7 @@ Shu bilan bir qatorda, ``picozero.py`` faylini Raspberry Pi Pico-ga o'tkazish uc
 .. image:: /images/thonny-view-files.jpg
     :alt: View menyusidan tanlangan Files varianti
 
-picozero `GitHub repozitoriysi`_ni klonlang yoki `picozero.py`_ faylini yuklab oling va uni asosiy kompyuteringizda saqlang.
+picozero `GitHub repozitoriysi`_\ ni klonlang yoki `picozero.py`_\ ni yuklab oling va uni asosiy kompyuterda saqlang.
 
 .. only:: html
 

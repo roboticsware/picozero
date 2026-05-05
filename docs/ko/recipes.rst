@@ -10,7 +10,7 @@ picozero 임포트하기
 
 picozero를 사용하려면 스크립트 맨 위에 `import` 줄을 추가해야 합니다.
 
-필요한 항목만 임포트할 수 있으며, 항목은 쉼표 ``,``로 구분합니다::
+필요한 항목만 임포트할 수 있으며, 항목은 쉼표 ``,``\ 로 구분합니다::
 
     from picozero import pico_led, LED
 
@@ -51,7 +51,7 @@ Raspberry Pi Pico의 LED를 켜려면:
 핀 배열 (Pin out)
 -----------------
 
-핀과 핀 번호를 표시하는 Raspberry Pi Pico의 *다이어그램*을 출력할 수 있습니다.
+핀과 핀 번호를 표시하는 Raspberry Pi Pico의 *다이어그램*\ 을 출력할 수 있습니다.
 
 .. literalinclude:: /examples/print_pinout.py
 
@@ -146,7 +146,7 @@ Raspberry Pi Pico로 외부 LED를 제어할 수 있습니다.
 
     ``button.when_pressed = led_on_off`` 줄은 ``led_on_off`` 함수를 즉시 실행하는 것이 아니라, 버튼이 눌렸을 때 호출될 함수에 대한 참조를 생성합니다. 실수로 ``button.when_pressed = led_on_off()``를 사용하면 ``when_pressed`` 동작이 :data:`None`(이 함수의 반환 값)으로 설정되어 버튼을 눌러도 아무 일도 일어나지 않습니다.
 
-:class:`Button`을 눌렀을 때 :obj:`pico_led`\ 를 켜고 뗐을 때 끄기:
+:class:`Button`\ 을 눌렀을 때 :obj:`pico_led`\ 를 켜고 뗐을 때 끄기:
 
 .. literalinclude:: /examples/button_led.py
 
@@ -188,7 +188,7 @@ RGB LED
 
 색상 사이를 변경하려면 :meth:`~picozero.RGBLED.blink`\ 를 사용하십시오. 어떤 색상을 사용할지, 각 색상이 얼마나 유지될지 제어할 수 있습니다. 색상 `(0, 0, 0)`은 꺼짐을 의미합니다. 
 
-:meth:`~picozero.RGBLED.blink`가 정해진 횟수만큼 실행될지, 끝날 때까지 기다릴지, 아니면 다른 코드가 실행될 수 있도록 즉시 반환할지 제어할 수 있습니다.
+:meth:`~picozero.RGBLED.blink`\ 가 정해진 횟수만큼 실행될지, 끝날 때까지 기다릴지, 아니면 다른 코드가 실행될 수 있도록 즉시 반환할지 제어할 수 있습니다.
 
 .. literalinclude:: /examples/rgb_blink.py
 
