@@ -15,9 +15,9 @@ picozero를 빌드하고 배포하려면 다음 의존성을 설치해야 합니
 
 1. ``setup.py``, ``picozero/__init__.py``, 그리고 ``docs/conf.py`` 파일의 버전 번호를 업데이트합니다.
 
-2. ``docs/changelog.rst``에 릴리스 내용을 추가합니다.
+2. ``docs/changelog.rst`` 에 릴리스 내용을 추가합니다.
 
-3. ``setup.py``를 실행하여 소스 배포판을 만듭니다::
+3. ``setup.py`` 를 실행하여 소스 배포판을 만듭니다::
 
     python3 setup.py sdist
 
@@ -27,7 +27,7 @@ picozero를 빌드하고 배포하려면 다음 의존성을 설치해야 합니
 
 5. 모든 변경 사항을 ``master`` 브랜치에 푸시합니다.
 
-6. GitHub에서 `릴리스 <https://github.com/roboticsware/picozero/releases>`_를 생성하고 ``picozero-#-#-#.tar.gz`` 소스 파일을 릴리스에 업로드합니다.
+6. GitHub에서 `릴리스 <https://github.com/roboticsware/picozero/releases>`_ 를 생성하고 ``picozero-#-#-#.tar.gz`` 소스 파일을 릴리스에 업로드합니다.
 
 문서
 ----
@@ -68,7 +68,7 @@ picozero를 빌드하고 배포하려면 다음 의존성을 설치해야 합니
     # Uncomment to investigate failure in detail
     #raise
 
-``raise``의 주석을 해제합니다::
+``raise`` 의 주석을 해제합니다::
 
     # Uncomment to investigate failure in detail
     raise

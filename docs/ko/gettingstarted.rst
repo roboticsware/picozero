@@ -194,4 +194,4 @@ Raspberry Pi Pico에서 프로그램을 실행하도록 선택할 수 있습니�
 
 .. image:: /images/save-this-raspberry-pi-pico.png
 
-파일 이름을 ``main.py``로 정하면 Pico의 전원이 켜질 때 자동으로 실행됩니다.
+파일 이름을 ``main.py`` 로 정하면 Pico의 전원이 켜질 때 자동으로 실행됩니다.
