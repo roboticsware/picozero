@@ -2,8 +2,41 @@ O'zgarishlar tarixi
 ===================
 
 .. currentmodule:: picozero
+0.6.2 - 2026-5-3
+---------------
++ Asl picozero repozitoriysidan birlashtirildi (Merge qilindi).
+
+0.6.1 - 2025-11-28
+-----------
+
++ Hujjatlar yangilandi
+
+0.6.0 - 2025-11-26
+-----------
+
++ Qadamli motorlar (stepper motorlar) uchun ``Stepper`` klassi joriy etildi
++ Kapasitiv sensorlar uchun ``TouchSensor`` klassi joriy etildi
++ Testlar va hujjatlar yangilandi
++ Boshqa kichik xatolar tuzatildi
+
+0.5.2 - 2025-11-26
+-----------
+
++ Qo'lda o'rnatish ko'rsatmalaridagi 404 xatolik tuzatildi
+
+0.5.1 - 2025-11-24
+-----------
+
++ Hujjatlardagi noto'g'ri misol tuzatildi
+
+0.5.0 - 2025-10-31
+-----------
+
++ PIR sensorlari uchun ``MotionSensor`` klassi joriy etildi
+
 0.4.2 ... 0.4.5
 ---------------
+
 + ``I2cLcd`` klassi qo'shildi
 + Servo uchun ``move_to_degree`` API-si qo'shildi
 + AnalogOutput(ADC) uchun ``raw_value`` xususiyati qo'shildi
