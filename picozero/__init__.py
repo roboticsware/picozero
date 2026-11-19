@@ -35,4 +35,6 @@ from .picozero import (
     Thermistor,
     DistanceSensor,
     I2cLcd,
+    GpioLcd,
+    OLED,
 )

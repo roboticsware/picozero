@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 580" width="100%" height="100%">
+  <!-- Raspberry Pi Pico I2C OLED Circuit -->
+  <defs>
+    <style>
+      .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12.2px; fill: #2c3e50; font-weight: 500; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14.5px; font-weight: 700; fill: #1a252f; }
+      .comp-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13.5px; font-weight: 700; fill: #1e293b; }
+      .pin-silk { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 8.5px; font-weight: 700; }
+      .pill-text { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 9px; fill: #ffffff; font-weight: 700; }
+      .wire-lbl { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 700; }
+      .mono-sm { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 8.5px; font-weight: 700; }
+    </style>
+    <linearGradient id="pico-pcb" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16803d"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <linearGradient id="ic-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#272e3a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="shadow" x="-8%" y="-8%" width="118%" height="120%" filterUnits="objectBoundingBox">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.18"/>
+    </filter>
+    <filter id="led-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#fcfcfc" rx="10"/>
+  <rect x="8" y="8" width="904" height="564" fill="none" stroke="#e1e8ed" stroke-width="1.5" rx="8"/>
+  <!-- Raspberry Pi Pico (RP2040) Board -->
+  <g transform="translate(144, 72)" filter="url(#shadow)">
+    <rect width="204" height="446" rx="6" fill="url(#pico-pcb)" stroke="#0f3d21" stroke-width="2"/>
+    <circle cx="24" cy="14" r="5.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="2"/>
+    <circle cx="180" cy="14" r="5.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="2"/>
+    <circle cx="24" cy="432" r="5.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="2"/>
+    <circle cx="180" cy="432" r="5.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="2"/>
+    <!-- Top Micro-USB Port -->
+    <rect x="74" y="-10" width="56" height="34" rx="3" fill="#cbd5e1" stroke="#475569" stroke-width="1.4"/>
+    <rect x="82" y="-7" width="40" height="8" rx="1.5" fill="#1e293b"/>
+    <text x="102" y="16" text-anchor="middle" font-family="monospace" font-size="7.5px" font-weight="800" fill="#334155">USB</text>
+    <!-- GP25 LED -->
+    <rect x="50" y="20" width="11" height="13" rx="2" fill="#0f3d21" stroke="#86efac" stroke-width="0.8"/>
+    <circle cx="55.5" cy="26.5" r="3.1" fill="#4ade80" filter="url(#led-glow)"/>
+    <text x="65" y="29" text-anchor="start" font-family="monospace" font-size="6px" font-weight="700" fill="#bbf7d0">LED(25)</text>
+    <!-- RT6150 Buck-Boost Regulator -->
+    <rect x="122" y="64" width="16" height="20" rx="2" fill="#1e293b" stroke="#64748b" stroke-width="0.9"/>
+    <text x="130" y="94" text-anchor="middle" font-family="monospace" font-size="5.5px" font-weight="700" fill="#bbf7d0">REG</text>
+    <!-- BOOTSEL Pushbutton -->
+    <rect x="85" y="72" width="34" height="28" rx="4" fill="#cbd5e1" stroke="#475569" stroke-width="1.2"/>
+    <ellipse cx="102" cy="86" rx="9" ry="7" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+    <text x="102" y="112" text-anchor="middle" font-family="monospace" font-size="7px" font-weight="800" fill="#ffffff">BOOTSEL</text>
+    <!-- Board Silkscreen Title -->
+    <text x="102" y="146" text-anchor="middle" font-family="sans-serif" font-size="9.8px" font-weight="800" fill="#ffffff">Raspberry Pi</text>
+    <text x="102" y="162" text-anchor="middle" font-family="sans-serif" font-size="13.5px" font-weight="800" letter-spacing="0.8" fill="#fef08a">PICO</text>
+    <!-- Center RP2040 Microcontroller -->
+    <g transform="translate(102, 240)">
+      <g transform="rotate(45)">
+        <rect x="-26" y="-26" width="52" height="52" rx="4" fill="url(#ic-grad)" stroke="#64748b" stroke-width="1.4"/>
+        <rect x="-21" y="-21" width="42" height="42" rx="2" fill="none" stroke="#334155" stroke-width="0.8"/>
+      </g>
+      <text x="0" y="-2" text-anchor="middle" font-family="monospace" font-size="8.5px" font-weight="800" fill="#e2e8f0">RP2040</text>
+      <text x="0" y="9" text-anchor="middle" font-family="monospace" font-size="6px" font-weight="700" fill="#94a3b8">Dual ARM M0+</text>
+    </g>
+    <!-- 2MB QSPI Flash & 12MHz Crystal -->
+    <rect x="82" y="316" width="40" height="28" rx="3" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+    <text x="102" y="333" text-anchor="middle" font-family="monospace" font-size="7px" font-weight="700" fill="#cbd5e1">FLASH 2M</text>
+    <rect x="86" y="362" width="32" height="14" rx="2" fill="#94a3b8" stroke="#475569" stroke-width="0.9"/>
+    <!-- Bottom 3-Pin Debug Header -->
+    <text x="102" y="408" text-anchor="middle" font-family="monospace" font-size="6.2px" font-weight="700" fill="#bbf7d0">SWD DEBUG</text>
+    <circle cx="84" cy="424" r="4" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="102" cy="424" r="4" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="120" cy="424" r="4" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <!-- 40-Pin Headers (20 Left + 20 Right) -->
+    <rect x="9" y="45" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="50" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="53" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP0</text>
+    <rect x="9" y="63" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="68" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="71" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP1</text>
+    <rect x="9" y="81" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="86" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="89" text-anchor="start" class="pin-silk" fill="#ffffff">GND</text>
+    <rect x="9" y="99" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="104" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="107" text-anchor="start" class="pin-silk" fill="#ffffff">GP2</text>
+    <rect x="9" y="117" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="122" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="125" text-anchor="start" class="pin-silk" fill="#ffffff">GP3</text>
+    <rect x="9" y="135" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="140" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="143" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP4</text>
+    <rect x="9" y="153" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="158" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="161" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP5</text>
+    <rect x="9" y="171" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="176" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="179" text-anchor="start" class="pin-silk" fill="#bbf7d0">GND</text>
+    <rect x="9" y="189" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="194" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="197" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP6</text>
+    <rect x="9" y="207" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="212" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="215" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP7</text>
+    <rect x="9" y="225" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="230" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="233" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP8</text>
+    <rect x="9" y="243" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="248" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="251" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP9</text>
+    <rect x="9" y="261" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="266" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="269" text-anchor="start" class="pin-silk" fill="#bbf7d0">GND</text>
+    <rect x="9" y="279" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="284" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="287" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP10</text>
+    <rect x="9" y="297" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="302" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="305" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP11</text>
+    <rect x="9" y="315" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="320" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="323" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP12</text>
+    <rect x="9" y="333" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="338" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="341" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP13</text>
+    <rect x="9" y="351" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="356" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="359" text-anchor="start" class="pin-silk" fill="#bbf7d0">GND</text>
+    <rect x="9" y="369" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="374" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="377" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP14</text>
+    <rect x="9" y="387" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="14" cy="392" r="1.8" fill="#f1c40f"/>
+    <text x="24" y="395" text-anchor="start" class="pin-silk" fill="#bbf7d0">GP15</text>
+    <rect x="185" y="45" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="50" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="53" text-anchor="end" class="pin-silk" fill="#bbf7d0">VBUS</text>
+    <rect x="185" y="63" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="68" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="71" text-anchor="end" class="pin-silk" fill="#bbf7d0">VSYS</text>
+    <rect x="185" y="81" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="86" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="89" text-anchor="end" class="pin-silk" fill="#bbf7d0">GND</text>
+    <rect x="185" y="99" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="104" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="107" text-anchor="end" class="pin-silk" fill="#bbf7d0">3V3_EN</text>
+    <rect x="185" y="117" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="122" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="125" text-anchor="end" class="pin-silk" fill="#ffffff">3V3</text>
+    <rect x="185" y="135" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="140" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="143" text-anchor="end" class="pin-silk" fill="#bbf7d0">ADC_REF</text>
+    <rect x="185" y="153" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="158" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="161" text-anchor="end" class="pin-silk" fill="#bbf7d0">GP28</text>
+    <rect x="185" y="171" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="176" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="179" text-anchor="end" class="pin-silk" fill="#bbf7d0">AGND</text>
+    <rect x="185" y="189" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="194" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="197" text-anchor="end" class="pin-silk" fill="#bbf7d0">GP27</text>
+    <rect x="185" y="207" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="212" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="215" text-anchor="end" class="pin-silk" fill="#bbf7d0">GP26</text>
+    <rect x="185" y="225" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="230" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="233" text-anchor="end" class="pin-silk" fill="#bbf7d0">RUN</text>
+    <rect x="185" y="243" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="248" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="251" text-anchor="end" class="pin-silk" fill="#bbf7d0">GP22</text>
+    <rect x="185" y="261" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="266" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="269" text-anchor="end" class="pin-silk" fill="#bbf7d0">GND</text>
+    <rect x="185" y="279" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="284" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="287" text-anchor="end" class="pin-silk" fill="#bbf7d0">GP21</text>
+    <rect x="185" y="297" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="302" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="305" text-anchor="end" class="pin-silk" fill="#bbf7d0">GP20</text>
+    <rect x="185" y="315" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="320" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="323" text-anchor="end" class="pin-silk" fill="#bbf7d0">GP19</text>
+    <rect x="185" y="333" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="338" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="341" text-anchor="end" class="pin-silk" fill="#bbf7d0">GP18</text>
+    <rect x="185" y="351" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="356" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="359" text-anchor="end" class="pin-silk" fill="#bbf7d0">GND</text>
+    <rect x="185" y="369" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="374" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="377" text-anchor="end" class="pin-silk" fill="#bbf7d0">GP17</text>
+    <rect x="185" y="387" width="10" height="10" rx="1.8" fill="#0b0f17" stroke="#d49b1a" stroke-width="1.3"/>
+    <circle cx="190" cy="392" r="1.8" fill="#f1c40f"/>
+    <text x="180" y="395" text-anchor="end" class="pin-silk" fill="#bbf7d0">GP16</text>
+  </g>
+  <!-- Wires (Zero-Crossing Nested Planar Layout) -->
+  <g>
+    <path d="M 334 194 L 452 194 L 452 250 L 534 250" fill="none" stroke="#fcfcfc" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 334 194 L 452 194 L 452 250 L 534 250" fill="none" stroke="#e84118" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 158 194 L 52 194 L 52 534 L 466 534 L 466 278 L 534 278" fill="none" stroke="#fcfcfc" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 158 194 L 52 194 L 52 534 L 466 534 L 466 278 L 534 278" fill="none" stroke="#f39c12" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 158 176 L 38 176 L 38 548 L 480 548 L 480 306 L 534 306" fill="none" stroke="#fcfcfc" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 158 176 L 38 176 L 38 548 L 480 548 L 480 306 L 534 306" fill="none" stroke="#27ae60" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 158 158 L 24 158 L 24 562 L 494 562 L 494 334 L 534 334" fill="none" stroke="#fcfcfc" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 158 158 L 24 158 L 24 562 L 494 562 L 494 334 L 534 334" fill="none" stroke="#2f3640" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Active Pin Pads & External Callout Pills -->
+  <rect x="328.5" y="188.5" width="11" height="11" rx="2" fill="#e84118" stroke="#ffffff" stroke-width="1.2"/>
+  <circle cx="334" cy="194" r="2.2" fill="#ffffff"/>
+  <g transform="translate(358, 186)">
+    <rect width="66" height="16" rx="3.5" fill="#e84118" stroke="#ffffff" stroke-width="1"/>
+    <text x="33.0" y="11" text-anchor="middle" class="pill-text">3V3</text>
+  </g>
+  <rect x="152.5" y="188.5" width="11" height="11" rx="2" fill="#f39c12" stroke="#ffffff" stroke-width="1.2"/>
+  <circle cx="158" cy="194" r="2.2" fill="#ffffff"/>
+  <g transform="translate(68, 186)">
+    <rect width="66" height="16" rx="3.5" fill="#f39c12" stroke="#ffffff" stroke-width="1"/>
+    <text x="33.0" y="11" text-anchor="middle" class="pill-text">GP3 (SCL)</text>
+  </g>
+  <rect x="152.5" y="170.5" width="11" height="11" rx="2" fill="#27ae60" stroke="#ffffff" stroke-width="1.2"/>
+  <circle cx="158" cy="176" r="2.2" fill="#ffffff"/>
+  <g transform="translate(68, 168)">
+    <rect width="66" height="16" rx="3.5" fill="#27ae60" stroke="#ffffff" stroke-width="1"/>
+    <text x="33.0" y="11" text-anchor="middle" class="pill-text">GP2 (SDA)</text>
+  </g>
+  <rect x="152.5" y="152.5" width="11" height="11" rx="2" fill="#2f3640" stroke="#ffffff" stroke-width="1.2"/>
+  <circle cx="158" cy="158" r="2.2" fill="#ffffff"/>
+  <g transform="translate(68, 150)">
+    <rect width="66" height="16" rx="3.5" fill="#2f3640" stroke="#ffffff" stroke-width="1"/>
+    <text x="33.0" y="11" text-anchor="middle" class="pill-text">GND</text>
+  </g>
+  <!-- 0.96" / 1.3" I2C OLED Display Module (SSD1306 / SH1106) -->
+  <g transform="translate(566, 200)" filter="url(#shadow)">
+    <!-- Left 4-Pin Header (abs x=534; abs y=250, 278, 306, 334) -->
+    <rect x="-40" y="34" width="48" height="114" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1.2"/>
+    <circle cx="-32" cy="50" r="4" fill="#e84118" stroke="#ffffff" stroke-width="0.9"/>
+    <text x="-22" y="53" class="mono-sm" style="font-size:8px;" fill="#fca5a5">VCC</text>
+    <circle cx="-32" cy="78" r="4" fill="#f39c12" stroke="#ffffff" stroke-width="0.9"/>
+    <text x="-22" y="81" class="mono-sm" style="font-size:8px;" fill="#fde047">SCL</text>
+    <circle cx="-32" cy="106" r="4" fill="#27ae60" stroke="#ffffff" stroke-width="0.9"/>
+    <text x="-22" y="109" class="mono-sm" style="font-size:8px;" fill="#86efac">SDA</text>
+    <circle cx="-32" cy="134" r="4" fill="#2f3640" stroke="#94a3b8" stroke-width="0.9"/>
+    <text x="-22" y="137" class="mono-sm" style="font-size:8px;" fill="#cbd5e1">GND</text>
+
+    <!-- Blue OLED Carrier PCB -->
+    <rect x="4" y="0" width="276" height="184" rx="8" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2"/>
+    <circle cx="18" cy="14" r="5" fill="#f8fafc" stroke="#eab308" stroke-width="2"/>
+    <circle cx="266" cy="14" r="5" fill="#f8fafc" stroke="#eab308" stroke-width="2"/>
+    <circle cx="18" cy="170" r="5" fill="#f8fafc" stroke="#eab308" stroke-width="2"/>
+    <circle cx="266" cy="170" r="5" fill="#f8fafc" stroke="#eab308" stroke-width="2"/>
+
+    <text x="142" y="19" text-anchor="middle" class="mono-sm" style="font-size:8.5px;" fill="#dbeafe">0.96&quot; / 1.3&quot; I2C OLED (3.3V)</text>
+
+    <!-- OLED Glass Panel -->
+    <rect x="22" y="28" width="240" height="128" rx="4" fill="#090d16" stroke="#334155" stroke-width="2"/>
+    <rect x="30" y="36" width="224" height="112" rx="2" fill="#020617"/>
+    <text x="42" y="60" font-family="'Courier New', Courier, monospace" font-size="16px" font-weight="800" fill="#facc15">Hello, picozero!</text>
+    <line x1="42" y1="70" x2="242" y2="70" stroke="#38bdf8" stroke-width="1.5" opacity="0.6"/>
+    <text x="42" y="98" font-family="'Courier New', Courier, monospace" font-size="15px" font-weight="800" fill="#38bdf8">Raspberry Pi Pico</text>
+    <text x="42" y="128" font-family="'Courier New', Courier, monospace" font-size="14px" font-weight="700" fill="#38bdf8">SSD1306 / SH1106</text>
+
+    <text x="142" y="-16" text-anchor="middle" class="comp-title">I2C OLED Display (SSD1306 / SH1106)</text>
+  </g>
+  <!-- Info Card -->
+  <g transform="translate(456, 16)">
+    <rect width="446" height="118" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="14" y="24" class="title">Raspberry Pi Pico — I2C OLED (3.3V Native)</text>
+    <circle cx="22" cy="44" r="5" fill="#e84118"/>
+    <text x="35" y="48" class="label">3V3 (Pin 36) → OLED VCC (No Level Shifter Needed)</text>
+    <circle cx="22" cy="64" r="5" fill="#2f3640"/>
+    <text x="35" y="68" class="label">GND (Pin 3) → OLED GND</text>
+    <circle cx="22" cy="84" r="5" fill="#27ae60"/>
+    <text x="35" y="88" class="label">GP2 (Pin 4, I2C1 SDA) → OLED SDA</text>
+    <circle cx="22" cy="104" r="5" fill="#f39c12"/>
+    <text x="35" y="108" class="label">GP3 (Pin 5, I2C1 SCL) → OLED SCL</text>
+  </g>
+</svg>

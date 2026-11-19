@@ -177,3 +177,19 @@ I2cLcd
     :show-inheritance:
     :inherited-members:
     :members: 
+
+GpioLcd (4비트 GPIO LCD)
+------------------------
+
+.. autoclass:: GpioLcd
+    :show-inheritance:
+    :inherited-members:
+    :members:
+
+OLED 디스플레이 (OLED)
+----------------------
+
+.. autoclass:: OLED
+    :show-inheritance:
+    :inherited-members:
+    :members:

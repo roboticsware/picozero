@@ -340,26 +340,50 @@ Check the internal temperature of the Raspberry Pi Pico in degrees Celcius:
 Ultrasonic distance sensor
 --------------------------
 
-Get the distance in centimetres from an ultrasonic distance sensor (HC-SR04):
+Get the distance in centimetres using a 3.3V-compatible ultrasonic distance sensor (**HC-SR04P** or **HC-SR04+** powered from ``3V3``):
 
-.. image:: /images/distance_sensor_bb.svg
-    :alt: A diagram of the Raspberry Pi Pico connected to an HC-SR04 distance sensor.
+.. warning::
+    **5V Overvoltage Hazard (Legacy HC-SR04):** Standard 5V-only ``HC-SR04`` modules powered from ``VBUS`` (5V) output a **5V logic signal** on the ``ECHO`` pin. Raspberry Pi Pico (RP2040) GPIO pins operate at **3.3V** and are **not 5V-tolerant** — connecting a 5V ``ECHO`` pin directly to ``GP2`` can permanently damage the chip.
+
+    - **Recommended:** Use a 3.3V–5V wide-voltage **HC-SR04P** (or **HC-SR04+**) powered from ``3V3`` (safe 3.3V ``ECHO``).
+    - **If using a legacy 5V HC-SR04:** Step down the ``ECHO`` output to 3.3V using a **voltage divider** (e.g., ``1kΩ`` between ``ECHO`` and ``GP2``, plus ``2kΩ`` from ``GP2`` to ``GND``).
+
+.. image:: /images/circuit_distance.svg
+    :alt: A diagram of the Raspberry Pi Pico connected to an HC-SR04P 3.3V ultrasonic distance sensor.
 
 .. literalinclude:: examples/ultrasonic_distance_sensor.py
 
+OLED Display (I2C)
+------------------
+
+Display crisp text and graphics on a 0.96" or 1.3" **I2C OLED** module (``SSD1306`` or ``SH1106``). Unlike 5V character LCD backpacks, OLED modules operate natively at **3.3V** and wire directly to the Raspberry Pi Pico without a level shifter:
+
+- Pass ``driver="sh1106"`` to ``OLED(...)`` if using a 1.3" SH1106 display instead of the default 0.96" SSD1306.
+
+.. image:: /images/circuit_oled.svg
+    :alt: A diagram of the Raspberry Pi Pico connected directly to a 3.3V I2C OLED display (SSD1306 or SH1106).
+
+.. literalinclude:: examples/oled.py
+
 LCD Display
---------------------------
+-----------
 
-Print chracters on LiquidCrystal displays (LCD) by using the I2C bus and an PCF8574 I2C adapter.
+Print characters on LiquidCrystal displays (16x2 LCD) by using the I2C bus with a PCF8574 I2C backpack:
 
-.. image:: /images/i2c_lcd.png
-    :alt: A diagram of the Raspberry Pi Pico connected to an 16x2 Character LCD Display by I2C bus.
+.. warning::
+    **Use a Logic Level Shifter (3.3V ⇄ 5V) for PCF8574:** Most 16x2 LCD modules require a **5V** supply (``VBUS``), and PCF8574 I2C backpacks include pull-up resistors to **5V**, which over-drive RP2040 GPIO pins (3.3V). Insert a bidirectional **I2C logic level shifter** (``LV ← 3V3``, ``HV ← VBUS 5V``) on ``SDA`` and ``SCL``, or switch to a **3.3V native I2C OLED** above.
+
+.. image:: /images/circuit_i2c_lcd.svg
+    :alt: A diagram of the Raspberry Pi Pico connected to a 5V 16x2 PCF8574 I2C LCD through a 3.3V to 5V bidirectional logic level shifter.
 
 .. literalinclude:: examples/i2c_lcd.py
 
-Print chracters on LiquidCrystal displays (LCD) by using GPIO pins only.
+Print characters on LiquidCrystal displays (16x2 LCD) in 4-bit mode using GPIO pins directly:
 
-.. image:: /images/lcd.png
-    :alt: A diagram of the Raspberry Pi Pico connected to an 16x2 Character LCD Display.
+.. note::
+    **Write-Only Safety (RW → GND):** Although the HD44780 LCD module is powered from ``VBUS`` (5V), tying the ``RW`` (Read/Write) pin permanently to ``GND`` keeps the LCD in write-only mode so it never outputs 5V signals back into the Pico's 3.3V GPIO pins (``GP16`` to ``GP21``). Use a ``10kΩ`` potentiometer on ``V0`` for contrast and a ``220Ω`` series resistor on ``A`` for the backlight.
+
+.. image:: /images/circuit_gpio_lcd.svg
+    :alt: A diagram of the Raspberry Pi Pico connected to a 16x2 Character LCD in 4-bit GPIO mode with RW tied to GND.
 
 .. literalinclude:: examples/lcd.py

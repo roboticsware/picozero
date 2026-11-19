@@ -177,3 +177,19 @@ I2cLcd
     :show-inheritance:
     :inherited-members:
     :members: 
+
+GpioLcd
+-------
+
+.. autoclass:: GpioLcd
+    :show-inheritance:
+    :inherited-members:
+    :members:
+
+OLED
+----
+
+.. autoclass:: OLED
+    :show-inheritance:
+    :inherited-members:
+    :members:

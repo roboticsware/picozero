@@ -337,26 +337,50 @@ Raspberry Pi Pico-ning ichki haroratini Selsiy darajasida tekshiring:
 Ultratovushli masofa sensori
 ----------------------------
 
-Ultratovushli masofa sensoridan (HC-SR04) masofani santimetrda oling:
+3.3V ga mos keladigan ultratovushli masofa sensoridan (**HC-SR04P** yoki **HC-SR04+**, ``3V3`` dan quvvatlanadi) masofani santimetrda oling:
 
-.. image:: /images/distance_sensor_bb.svg
-    :alt: HC-SR04 masofa sensoriga ulangan Raspberry Pi Pico diagrammasi.
+.. warning::
+    **5V kuchlanish oshishi xavfi (eski HC-SR04):** ``VBUS`` (5V) dan quvvatlanadigan standart 5V ``HC-SR04`` modullari ``ECHO`` pinidan **5V signal** chiqaradi. Raspberry Pi Pico (RP2040) GPIO pinlari **3.3V** kuchlanishda ishlaydi va **5V ga chidamli emas** — 5V ``ECHO`` pinini to'g'ridan-to'g'ri ``GP2`` piniga ulash chipni shikastlashi mumkin.
+
+    - **Tavsiya etiladi:** ``3V3`` pinidan quvvatlanadigan 3.3V–5V **HC-SR04P** (yoki **HC-SR04+**) modelidan foydalaning (xavfsiz 3.3V ``ECHO`` signali).
+    - **Agar eski 5V HC-SR04 ishlatsangiz:** ``ECHO`` signalini 3.3V ga tushirish uchun **kuchlanish bo'luvchi** (``ECHO`` va ``GP2`` orasiga ``1kΩ``, ``GP2`` va ``GND`` orasiga ``2kΩ`` rezistor) ulang.
+
+.. image:: /images/circuit_distance.svg
+    :alt: HC-SR04P 3.3V masofa sensoriga ulangan Raspberry Pi Pico diagrammasi.
 
 .. literalinclude:: /examples/ultrasonic_distance_sensor.py
+
+OLED displey (I2C)
+------------------
+
+0.96" yoki 1.3" **I2C OLED** modulida (``SSD1306`` yoki ``SH1106``) matn va grafikalarni aks ettiring. OLED modullari **3.3V** mantiqiy darajada ishlaydi va daraja o'zgartirgichsiz (level shifter) to'g'ridan-to'g'ri Raspberry Pi Pico ga xavfsiz ulanadi:
+
+- 1.3" SH1106 displeyi uchun ``OLED(..., driver="sh1106")`` parametrini ko'rsating.
+
+.. image:: /images/circuit_oled.svg
+    :alt: 3.3V I2C OLED displeyga (SSD1306 yoki SH1106) to'g'ridan-to'g'ri ulangan Raspberry Pi Pico diagrammasi.
+
+.. literalinclude:: /examples/oled.py
 
 LCD displey
 -----------
 
-I2C shinasi va PCF8574 I2C adapteridan foydalanib LiquidCrystal displeylarida (LCD) belgilarni chop eting.
+I2C shinasi va PCF8574 I2C adapteridan foydalanib LiquidCrystal displeylarida (16x2 LCD) belgilarni chop eting.
 
-.. image:: /images/i2c_lcd.png
-    :alt: I2C shinasi orqali 16x2 belgili LCD displeyga ulangan Raspberry Pi Pico diagrammasi.
+.. warning::
+    **PCF8574 uchun mantiqiy daraja o'zgartirgich (3.3V ⇄ 5V) zarur:** Aksariyat 16x2 LCD modullari **5V** (``VBUS``) quvvatini talab qiladi va PCF8574 I2C adapteridagi tortuvchi rezistorlar ``SDA``/``SCL`` liniyalarini **5V** ga ko'taradi. RP2040 (3.3V) pinlarini himoya qilish uchun ``GP2``/``GP3`` va LCD orasiga ikki yo'nalishli **I2C mantiqiy daraja o'zgartirgich** (``LV ← 3V3``, ``HV ← VBUS 5V``) qo'shing yoki yuqoridagi **3.3V I2C OLED** dan foydalaning.
+
+.. image:: /images/circuit_i2c_lcd.svg
+    :alt: 3.3V dan 5V ga mantiqiy daraja o'zgartirgich orqali 16x2 PCF8574 I2C LCD displeyga ulangan Raspberry Pi Pico diagrammasi.
 
 .. literalinclude:: /examples/i2c_lcd.py
 
-Faqat GPIO pinlaridan foydalanib LiquidCrystal displeylarida (LCD) belgilarni chop eting.
+Faqat GPIO pinlaridan 4-bit rejimida foydalanib LiquidCrystal displeylarida (16x2 LCD) belgilarni chop eting.
 
-.. image:: /images/lcd.png
-    :alt: 16x2 belgili LCD displeyga ulangan Raspberry Pi Pico diagrammasi.
+.. note::
+    **Faqat yozish xavfsizligi (RW → GND):** LCD moduli ``VBUS`` (5V) dan quvvatlansa-da, ``RW`` (O'qish/Yozish) pinini doimiy ravishda ``GND`` ga ulash displeyni faqat yozish rejimida ushlab turadi va 5V kuchlanishning Pico 3.3V GPIO pinlariga (``GP16`` - ``GP21``) qaytishini oldini oladi. Kontrast (``V0``) uchun ``10kΩ`` potentsiometr va yoritish (``A``) uchun ``220Ω`` rezistor ulang.
+
+.. image:: /images/circuit_gpio_lcd.svg
+    :alt: 4-bit GPIO rejimida 16x2 belgili LCD displeyga ulangan Raspberry Pi Pico diagrammasi.
 
 .. literalinclude:: /examples/lcd.py

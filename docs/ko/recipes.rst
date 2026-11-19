@@ -331,28 +331,52 @@ Raspberry Pi Pico의 내부 온도를 섭씨 단위로 확인합니다:
 .. literalinclude:: /examples/pico_temperature.py
 
 초음파 거리 센서
----------------
+----------------
 
-초음파 거리 센(HC-SR04)로부터의 거리를 센티미터 단위로 가져옵니다:
+3.3V 호환 초음파 거리 센서(**HC-SR04P** 또는 **HC-SR04+**, ``3V3`` 전원 사용)로부터 거리를 센티미터 단위로 가져옵니다:
 
-.. image:: /images/distance_sensor_bb.svg
-    :alt: HC-SR04 거리 센서에 연결된 Raspberry Pi Pico 다이어그램.
+.. warning::
+    **구형 5V HC-SR04 과전압 주의:** 구형 5V 전용 ``HC-SR04`` 센서에 ``VBUS`` (5V) 전원을 공급하면 ``ECHO`` 핀에서 **5V 신호**\ 가 출력됩니다. Raspberry Pi Pico(RP2040)의 GPIO 핀은 **3.3V 전용**\ 으로 **5V 내성이 없으므로**, ``ECHO`` 핀을 ``GP2``\ 에 직접 연결하면 칩이 영구적으로 손상될 수 있습니다.
+
+    - **권장 모델:** 3.3V~5V 겸용 **HC-SR04P** (또는 **HC-SR04+**) 모델을 ``3V3`` 핀에 연결하세요 (안전한 3.3V ``ECHO`` 신호 출력).
+    - **구형 5V HC-SR04 사용 시:** ``ECHO`` 출력과 ``GP2`` 사이에 ``1kΩ``, ``GP2``\ 와 ``GND`` 사이에 ``2kΩ`` 저항을 연결하는 **전압 분배 회로**\ 로 신호를 3.3V로 낮추어 연결해야 합니다.
+
+.. image:: /images/circuit_distance.svg
+    :alt: HC-SR04P 3.3V 초음파 거리 센서에 연결된 Raspberry Pi Pico 다이어그램.
 
 .. literalinclude:: /examples/ultrasonic_distance_sensor.py
+
+OLED 디스플레이 (I2C)
+---------------------
+
+0.96인치 또는 1.3인치 **I2C OLED** 모듈(``SSD1306`` 또는 ``SH1106``)에 선명한 텍스트와 그래픽을 출력합니다. OLED 모듈은 기본적으로 **3.3V 로직**\ 으로 동작하므로 레벨 시프터 없이 Raspberry Pi Pico에 바로 연결하여 안전하게 사용할 수 있습니다:
+
+- 1.3인치 SH1106 모듈을 사용하는 경우 ``OLED(..., driver="sh1106")`` 옵션을 지정하세요.
+
+.. image:: /images/circuit_oled.svg
+    :alt: 3.3V I2C OLED 디스플레이(SSD1306 또는 SH1106)에 직접 연결된 Raspberry Pi Pico 다이어그램.
+
+.. literalinclude:: /examples/oled.py
 
 LCD 디스플레이
 --------------
 
-I2C 버스와 PCF8574 I2C 어댑터를 사용하여 LiquidCrystal 디스플레이(LCD)에 문자를 출력합니다.
+I2C 버스와 PCF8574 I2C 어댑터를 사용하여 LiquidCrystal 디스플레이(16x2 LCD)에 문자를 출력합니다.
 
-.. image:: /images/i2c_lcd.png
-    :alt: I2C 버스를 통해 16x2 캐릭터 LCD 디스플레이에 연결된 Raspberry Pi Pico 다이어그램.
+.. warning::
+    **PCF8574 사용 시 로직 레벨 시프터(3.3V ⇄ 5V) 필수:** 일반 16x2 LCD와 PCF8574 I2C 백팩은 **5V** (``VBUS``) 전원을 필요로 하며, 보드 내장 I2C 풀업 저항이 ``SDA``/``SCL`` 라인을 **5V**\ 로 끌어올려 3.3V 전용 RP2040 GPIO에 과부하를 줄 수 있습니다. ``GP2``/``GP3``\ 과 LCD 사이에 양방향 **I2C 로직 레벨 시프터** (``LV ← 3V3``, ``HV ← VBUS 5V``)를 반드시 추가하거나, 레벨 시프터가 필요 없는 위 **3.3V I2C OLED** 사용을 권장합니다.
+
+.. image:: /images/circuit_i2c_lcd.svg
+    :alt: 3.3V-5V 양방향 로직 레벨 시프터를 통해 16x2 PCF8574 I2C LCD 디스플레이에 연결된 Raspberry Pi Pico 다이어그램.
 
 .. literalinclude:: /examples/i2c_lcd.py
 
-GPIO 핀만 사용하여 LiquidCrystal 디스플레이(LCD)에 문자를 출력합니다.
+GPIO 핀만 사용하여 4비트 병렬 모드로 LiquidCrystal 디스플레이(16x2 LCD)에 문자를 출력합니다.
 
-.. image:: /images/lcd.png
-    :alt: 16x2 캐릭터 LCD 디스플레이에 연결된 Raspberry Pi Pico 다이어그램.
+.. note::
+    **쓰기 전용 안전 배선 (RW → GND):** LCD 모듈은 ``VBUS`` (5V) 전원을 사용하지만, ``RW`` (읽기/쓰기) 핀을 항상 ``GND``\ 에 고정 연결하면 LCD가 읽기 모드로 전환되지 않아 Pico의 3.3V GPIO 핀(``GP16`` ~ ``GP21``)으로 5V 신호가 역류하는 것을 방지합니다. 대비(``V0``) 조절용 ``10kΩ`` 가변저항과 백라이트(``A``) 보호용 ``220Ω`` 저항을 함께 연결하세요.
+
+.. image:: /images/circuit_gpio_lcd.svg
+    :alt: 4비트 GPIO 모드로 16x2 캐릭터 LCD 디스플레이에 연결된 Raspberry Pi Pico 다이어그램.
 
 .. literalinclude:: /examples/lcd.py
