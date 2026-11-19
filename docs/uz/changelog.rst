@@ -2,6 +2,12 @@ O'zgarishlar tarixi
 ===================
 
 .. currentmodule:: picozero
+0.6.3 - 2026-11-19
+------------------
++ SSD1306 va SH1106 I2C displeylarini qo'llab-quvvatlovchi ``OLED`` klassi joriy etildi
++ Ultratovush va LCD ulanish diagrammalari xavfsiz 3.3V sxemalarga almashtirildi
++ Ingliz, o'zbek va koreys tillaridagi hujjatlar yangilandi
+
 0.6.2 - 2026-5-3
 ---------------
 + Asl picozero repozitoriysidan birlashtirildi (Merge qilindi).

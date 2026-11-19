@@ -2,6 +2,13 @@ Change log
 ==========
 
 .. currentmodule:: picozero
+
+0.6.3 - 2026-11-19
+------------------
++ Introduced ``OLED`` class supporting SSD1306 and SH1106 I2C displays
++ Replaced Ultrasonic and LCD circuit diagrams with safe 3.3V wiring diagrams
++ Updated documentation in English, Korean, and Uzbek
+
 0.6.2 - 2026-5-3
 ---------------
 + Merged from original picozero repo.
