@@ -269,7 +269,13 @@ Play individual notes and control the timing or perform another action:
 Servo
 -----
 
-A servo motor connected to a single pin, 3.3v and ground.
+A 3.3V-compatible micro servo motor (such as Feetech FS90 or a 3.0V–6.0V wide-voltage micro servo) connected to a single GPIO pin (``GP1``), 3.3V (``3V3``), and ground (``GND``):
+
+.. note::
+    3.3V Servo Recommendation & Legacy 5V Servo (SG-90) Wiring:
+
+    - Recommended: When powered directly from the Pico's ``3V3`` pin, use a 3.0V–6.0V wide-voltage micro servo (such as FS90 or other 3V-compatible micro servos).
+    - If using standard 5V servos (SG-90): Connecting a legacy 5V-only SG-90 (4.8V–6.0V) to ``3V3`` can lead to jitter, insufficient torque, or board brown-out resets caused by sudden voltage drops. When using a 5V servo, connect its power lead (red) to ``VBUS`` (5V, Pin 40) or an external 5V supply instead of ``3V3`` (the control signal wire is safe to connect directly to 3.3V GPIO pins).
 
 .. image:: /images/servo.svg
     :alt: A diagram of the Raspberry Pi Pico connected to a servo motor

@@ -268,7 +268,13 @@ Alohida notalarni chaling va vaqtni boshqaring yoki boshqa harakatni bajaring:
 Servo
 -----
 
-Bitta pin, 3.3v va yerga (ground) ulangan servo motor.
+Bitta GPIO pin (``GP1``), 3.3V (``3V3``) va yerga (``GND``) ulangan 3.3V mos keluvchi mikro servo motor (masalan, Feetech FS90 yoki 3.0V–6.0V keng kuchlanishli mikro servo):
+
+.. note::
+    3.3V Servodan foydalanish tavsiyasi va oddiy 5V Servolar (SG-90) uchun eslatma:
+
+    - Tavsiya etiladi: Pico'ning ``3V3`` quvvat chiqishidan foydalanganda 3.0V–6.0V oralig'ida ishlovchi mikro servolardan (masalan, FS90) foydalaning.
+    - Oddiy 5V servolar (SG-90) ishlatilganda: Standart 4.8V–6.0V talab qiluvchi SG-90 ni ``3V3`` piniga ulash kuchlanish pasayishi oqibatida Pico ning qayta ishga tushishi (Brown-out) yoki yetarsiz aylanish kuchiga olib kelishi mumkin. 5V servolar ishlatilganda qizil quvvat simini ``3V3`` o'rniga Pico ning ``VBUS`` (5V, Pin 40) piniga yoki tashqi 5V quvvat manbaiga ulang (boshqaruv signali simini 3.3V GPIO piniga to'g'ridan-to'g'ri ulash xavfsiz).
 
 .. image:: /images/servo.svg
     :alt: Servo motorga ulangan Raspberry Pi Pico diagrammasi
