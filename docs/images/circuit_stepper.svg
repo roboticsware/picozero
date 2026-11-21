@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="100%" height="100%">
+  <!-- Raspberry Pi Pico 28BYJ-48 Stepper Motor + ULN2003 Driver Circuit -->
+  <defs>
+    <style>
+      .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 12px; fill: #2c3e50; font-weight: 500; }
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 14.5px; font-weight: 700; fill: #1a252f; }
+      .comp-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 13.5px; font-weight: 700; fill: #1e293b; }
+      .pin-silk { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 8.5px; font-weight: 700; }
+      .pill-text { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 9px; fill: #ffffff; font-weight: 700; }
+      .mono-sm { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; font-size: 8.5px; font-weight: 700; }
+    </style>
+    <linearGradient id="pico-pcb" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16803d"/>
+      <stop offset="100%" stop-color="#14532d"/>
+    </linearGradient>
+    <linearGradient id="stepper-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="50%" stop-color="#cbd5e1"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="shadow" x="-8%" y="-8%" width="118%" height="120%" filterUnits="objectBoundingBox">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#fcfcfc" rx="10"/>
+  <rect x="8" y="8" width="944" height="584" fill="none" stroke="#e1e8ed" stroke-width="1.5" rx="8"/>
+
+  <!-- Info Card -->
+  <g transform="translate(470, 20)">
+    <rect width="460" height="150" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+    <text x="14" y="24" class="title">Raspberry Pi Pico — 28BYJ-48 Stepper &amp; ULN2003 Driver</text>
+    <circle cx="22" cy="46" r="5" fill="#f39c12"/>
+    <text x="35" y="50" class="label">GP1 (Pin 2) → IN1 | GP2 (Pin 4) → IN2</text>
+    <circle cx="22" cy="68" r="5" fill="#9b59b6"/>
+    <text x="35" y="72" class="label">GP3 (Pin 5) → IN3 | GP4 (Pin 6) → IN4</text>
+    <circle cx="22" cy="90" r="5" fill="#e84118"/>
+    <text x="35" y="94" class="label">VBUS (Pin 40, USB 5V) → Driver 5V-12V (+)</text>
+    <circle cx="22" cy="112" r="5" fill="#2f3640"/>
+    <text x="35" y="116" class="label">GND (Pin 3) → Driver GND (-)</text>
+    <text x="16" y="138" class="label" style="fill:#64748b;font-size:11px;">Motor: 28BYJ-48 5-wire stepper plugs directly into ULN2003 JST white socket.</text>
+  </g>
+
+  <!-- Raspberry Pi Pico (RP2040) Board -->
+  <g transform="translate(144, 72)" filter="url(#shadow)">
+    <rect width="204" height="446" rx="6" fill="url(#pico-pcb)" stroke="#0f3d21" stroke-width="2"/>
+    <circle cx="24" cy="14" r="5.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="2"/>
+    <circle cx="180" cy="14" r="5.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="2"/>
+    <circle cx="24" cy="432" r="5.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="2"/>
+    <circle cx="180" cy="432" r="5.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="2"/>
+    <!-- Top Micro-USB Port -->
+    <rect x="74" y="-10" width="56" height="34" rx="3" fill="#cbd5e1" stroke="#475569" stroke-width="1.4"/>
+    <rect x="82" y="-7" width="40" height="8" rx="1.5" fill="#1e293b"/>
+    <text x="102" y="16" text-anchor="middle" font-family="monospace" font-size="7.5px" font-weight="800" fill="#334155">USB</text>
+
+    <!-- RP2040 SoC Chip -->
+    <rect x="70" y="186" width="64" height="64" rx="4" fill="#1e293b" stroke="#0f172a" stroke-width="1.5"/>
+    <circle cx="80" cy="196" r="2.2" fill="#64748b"/>
+    <text x="102" y="218" text-anchor="middle" font-family="monospace" font-size="9px" font-weight="800" fill="#f8fafc">RP2040</text>
+    <text x="102" y="232" text-anchor="middle" font-family="monospace" font-size="6.5px" fill="#94a3b8">Raspberry Pi</text>
+
+    <!-- Board Labels -->
+    <text x="102" y="80" text-anchor="middle" font-family="sans-serif" font-size="11px" font-weight="800" fill="#ffffff" letter-spacing="0.5">Raspberry Pi Pico</text>
+
+    <!-- Pin Headers Left (Pins 1..20, x=14, pitch=18) -->
+    <!-- Pin 1 GP0 -->
+    <rect x="6" y="60" width="16" height="12" rx="2" fill="#cbd5e1"/>
+    <circle cx="14" cy="66" r="3" fill="#1e293b"/>
+    <text x="26" y="70" class="pin-silk" fill="#ffffff">GP0</text>
+    <!-- Pin 2 GP1 (IN1) -->
+    <rect x="6" y="78" width="16" height="12" rx="2" fill="#f39c12"/>
+    <circle cx="14" cy="84" r="3" fill="#ffffff"/>
+    <text x="26" y="88" class="pin-silk" fill="#ffffff">GP1</text>
+    <!-- Pin 3 GND -->
+    <rect x="6" y="96" width="16" height="12" rx="2" fill="#2f3640"/>
+    <circle cx="14" cy="102" r="3" fill="#ffffff"/>
+    <text x="26" y="106" class="pin-silk" fill="#cbd5e1">GND</text>
+    <!-- Pin 4 GP2 (IN2) -->
+    <rect x="6" y="114" width="16" height="12" rx="2" fill="#e67e22"/>
+    <circle cx="14" cy="120" r="3" fill="#ffffff"/>
+    <text x="26" y="124" class="pin-silk" fill="#ffffff">GP2</text>
+    <!-- Pin 5 GP3 (IN3) -->
+    <rect x="6" y="132" width="16" height="12" rx="2" fill="#9b59b6"/>
+    <circle cx="14" cy="138" r="3" fill="#ffffff"/>
+    <text x="26" y="142" class="pin-silk" fill="#ffffff">GP3</text>
+    <!-- Pin 6 GP4 (IN4) -->
+    <rect x="6" y="150" width="16" height="12" rx="2" fill="#8e44ad"/>
+    <circle cx="14" cy="156" r="3" fill="#ffffff"/>
+    <text x="26" y="160" class="pin-silk" fill="#ffffff">GP4</text>
+    <!-- Pin 7 GP5 -->
+    <rect x="6" y="168" width="16" height="12" rx="2" fill="#cbd5e1"/>
+    <circle cx="14" cy="174" r="3" fill="#1e293b"/>
+    <text x="26" y="178" class="pin-silk" fill="#ffffff">GP5</text>
+    <!-- Other Left Pins Dummy -->
+    <g fill="#cbd5e1">
+      <rect x="6" y="186" width="16" height="12" rx="2"/><circle cx="14" cy="192" r="3" fill="#1e293b"/>
+      <rect x="6" y="204" width="16" height="12" rx="2"/><circle cx="14" cy="210" r="3" fill="#1e293b"/>
+      <rect x="6" y="222" width="16" height="12" rx="2"/><circle cx="14" cy="228" r="3" fill="#1e293b"/>
+      <rect x="6" y="240" width="16" height="12" rx="2"/><circle cx="14" cy="246" r="3" fill="#1e293b"/>
+      <rect x="6" y="258" width="16" height="12" rx="2"/><circle cx="14" cy="264" r="3" fill="#1e293b"/>
+      <rect x="6" y="276" width="16" height="12" rx="2"/><circle cx="14" cy="282" r="3" fill="#1e293b"/>
+      <rect x="6" y="294" width="16" height="12" rx="2"/><circle cx="14" cy="300" r="3" fill="#1e293b"/>
+      <rect x="6" y="312" width="16" height="12" rx="2"/><circle cx="14" cy="318" r="3" fill="#1e293b"/>
+      <rect x="6" y="330" width="16" height="12" rx="2"/><circle cx="14" cy="336" r="3" fill="#1e293b"/>
+      <rect x="6" y="348" width="16" height="12" rx="2"/><circle cx="14" cy="354" r="3" fill="#1e293b"/>
+      <rect x="6" y="366" width="16" height="12" rx="2"/><circle cx="14" cy="372" r="3" fill="#1e293b"/>
+      <rect x="6" y="384" width="16" height="12" rx="2"/><circle cx="14" cy="390" r="3" fill="#1e293b"/>
+      <rect x="6" y="402" width="16" height="12" rx="2"/><circle cx="14" cy="408" r="3" fill="#1e293b"/>
+    </g>
+
+    <!-- Pin Headers Right (Pins 21..40, x=190, pitch=18) -->
+    <!-- Pin 40 VBUS (x=190, y=66) -->
+    <rect x="182" y="60" width="16" height="12" rx="2" fill="#e84118"/>
+    <circle cx="190" cy="66" r="3" fill="#ffffff"/>
+    <text x="146" y="70" class="pin-silk" fill="#fca5a5">VBUS</text>
+    <!-- Pin 39 VSYS -->
+    <rect x="182" y="78" width="16" height="12" rx="2" fill="#cbd5e1"/><circle cx="190" cy="84" r="3" fill="#1e293b"/>
+    <!-- Pin 38 GND -->
+    <rect x="182" y="96" width="16" height="12" rx="2" fill="#cbd5e1"/><circle cx="190" cy="102" r="3" fill="#1e293b"/>
+    <!-- Pin 37 3V3_EN -->
+    <rect x="182" y="114" width="16" height="12" rx="2" fill="#cbd5e1"/><circle cx="190" cy="120" r="3" fill="#1e293b"/>
+    <!-- Pin 36 3V3(OUT) -->
+    <rect x="182" y="132" width="16" height="12" rx="2" fill="#cbd5e1"/><circle cx="190" cy="138" r="3" fill="#1e293b"/>
+    <text x="144" y="142" class="pin-silk" fill="#cbd5e1">3V3</text>
+    <!-- Other Right Pins Dummy -->
+    <g fill="#cbd5e1">
+      <rect x="182" y="150" width="16" height="12" rx="2"/><circle cx="190" cy="156" r="3" fill="#1e293b"/>
+      <rect x="182" y="168" width="16" height="12" rx="2"/><circle cx="190" cy="174" r="3" fill="#1e293b"/>
+      <rect x="182" y="186" width="16" height="12" rx="2"/><circle cx="190" cy="192" r="3" fill="#1e293b"/>
+      <rect x="182" y="204" width="16" height="12" rx="2"/><circle cx="190" cy="210" r="3" fill="#1e293b"/>
+      <rect x="182" y="222" width="16" height="12" rx="2"/><circle cx="190" cy="228" r="3" fill="#1e293b"/>
+      <rect x="182" y="240" width="16" height="12" rx="2"/><circle cx="190" cy="246" r="3" fill="#1e293b"/>
+      <rect x="182" y="258" width="16" height="12" rx="2"/><circle cx="190" cy="264" r="3" fill="#1e293b"/>
+      <rect x="182" y="276" width="16" height="12" rx="2"/><circle cx="190" cy="282" r="3" fill="#1e293b"/>
+      <rect x="182" y="294" width="16" height="12" rx="2"/><circle cx="190" cy="300" r="3" fill="#1e293b"/>
+      <rect x="182" y="312" width="16" height="12" rx="2"/><circle cx="190" cy="318" r="3" fill="#1e293b"/>
+      <rect x="182" y="330" width="16" height="12" rx="2"/><circle cx="190" cy="336" r="3" fill="#1e293b"/>
+      <rect x="182" y="348" width="16" height="12" rx="2"/><circle cx="190" cy="354" r="3" fill="#1e293b"/>
+      <rect x="182" y="366" width="16" height="12" rx="2"/><circle cx="190" cy="372" r="3" fill="#1e293b"/>
+      <rect x="182" y="384" width="16" height="12" rx="2"/><circle cx="190" cy="390" r="3" fill="#1e293b"/>
+      <rect x="182" y="402" width="16" height="12" rx="2"/><circle cx="190" cy="408" r="3" fill="#1e293b"/>
+    </g>
+  </g>
+
+  <!-- External Callout Pills for Pico -->
+  <g transform="translate(68, 148)">
+    <rect width="66" height="16" rx="3.5" fill="#f39c12" stroke="#ffffff" stroke-width="1"/>
+    <text x="33" y="11" text-anchor="middle" class="pill-text">GP1 (IN1)</text>
+  </g>
+  <g transform="translate(68, 166)">
+    <rect width="66" height="16" rx="3.5" fill="#2f3640" stroke="#ffffff" stroke-width="1"/>
+    <text x="33" y="11" text-anchor="middle" class="pill-text">GND</text>
+  </g>
+  <g transform="translate(68, 184)">
+    <rect width="66" height="16" rx="3.5" fill="#e67e22" stroke="#ffffff" stroke-width="1"/>
+    <text x="33" y="11" text-anchor="middle" class="pill-text">GP2 (IN2)</text>
+  </g>
+  <g transform="translate(68, 202)">
+    <rect width="66" height="16" rx="3.5" fill="#9b59b6" stroke="#ffffff" stroke-width="1"/>
+    <text x="33" y="11" text-anchor="middle" class="pill-text">GP3 (IN3)</text>
+  </g>
+  <g transform="translate(68, 220)">
+    <rect width="66" height="16" rx="3.5" fill="#8e44ad" stroke="#ffffff" stroke-width="1"/>
+    <text x="33" y="11" text-anchor="middle" class="pill-text">GP4 (IN4)</text>
+  </g>
+  <g transform="translate(358, 130)">
+    <rect width="66" height="16" rx="3.5" fill="#e84118" stroke="#ffffff" stroke-width="1"/>
+    <text x="33" y="11" text-anchor="middle" class="pill-text">VBUS (5V)</text>
+  </g>
+
+  <!-- ULN2003 Driver Board Module -->
+  <g transform="translate(480, 230)" filter="url(#shadow)">
+    <!-- Board PCB -->
+    <rect width="210" height="210" rx="8" fill="#155e75" stroke="#0e7490" stroke-width="2"/>
+    <circle cx="16" cy="16" r="4.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="1.5"/>
+    <circle cx="194" cy="16" r="4.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="1.5"/>
+    <circle cx="16" cy="194" r="4.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="1.5"/>
+    <circle cx="194" cy="194" r="4.5" fill="#fcfcfc" stroke="#d49b1a" stroke-width="1.5"/>
+
+    <text x="105" y="24" text-anchor="middle" class="comp-title" fill="#ffffff">ULN2003 Stepper Driver</text>
+
+    <!-- ULN2003A SOP16 IC -->
+    <rect x="75" y="75" width="60" height="70" rx="3" fill="#1e293b" stroke="#0f172a" stroke-width="1.5"/>
+    <circle cx="85" cy="85" r="2.5" fill="#64748b"/>
+    <text x="105" y="114" text-anchor="middle" font-family="monospace" font-size="8.5px" font-weight="700" fill="#f8fafc">ULN2003</text>
+
+    <!-- 4 LEDs on Driver Board (A, B, C, D) -->
+    <circle cx="160" cy="80" r="4" fill="#fbbf24"/>
+    <text x="175" y="83" font-family="monospace" font-size="8px" fill="#fef08a">A</text>
+    <circle cx="160" cy="98" r="4" fill="#fbbf24"/>
+    <text x="175" y="101" font-family="monospace" font-size="8px" fill="#fef08a">B</text>
+    <circle cx="160" cy="116" r="4" fill="#fbbf24"/>
+    <text x="175" y="119" font-family="monospace" font-size="8px" fill="#fef08a">C</text>
+    <circle cx="160" cy="134" r="4" fill="#fbbf24"/>
+    <text x="175" y="137" font-family="monospace" font-size="8px" fill="#fef08a">D</text>
+
+    <!-- 5-Pin Motor JST Connector (Top Right) -->
+    <rect x="130" y="34" width="65" height="26" rx="2" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+    <circle cx="138" cy="47" r="2" fill="#e84118"/>
+    <circle cx="146" cy="47" r="2" fill="#f97316"/>
+    <circle cx="154" cy="47" r="2" fill="#fbbf24"/>
+    <circle cx="162" cy="47" r="2" fill="#ec4899"/>
+    <circle cx="170" cy="47" r="2" fill="#3b82f6"/>
+    <text x="162" y="30" text-anchor="middle" class="mono-sm" fill="#e2e8f0">MOTOR</text>
+
+    <!-- Power In 2-Pin Terminal (Bottom Left) -->
+    <rect x="18" y="150" width="34" height="24" rx="2" fill="#1e293b"/>
+    <rect x="22" y="154" width="10" height="16" fill="#e84118"/>
+    <rect x="38" y="154" width="10" height="16" fill="#2f3640"/>
+    <text x="27" y="188" text-anchor="middle" class="mono-sm" fill="#fca5a5">5V(+)</text>
+    <text x="43" y="188" text-anchor="middle" class="mono-sm" fill="#cbd5e1">GND(-)</text>
+
+    <!-- Signal Pins IN1, IN2, IN3, IN4 (Left Center) -->
+    <!-- Pins: abs y = 230 + 60, 80, 100, 120 -->
+    <rect x="-8" y="52" width="16" height="12" rx="2" fill="#f39c12"/>
+    <circle cx="0" cy="58" r="3" fill="#ffffff"/>
+    <text x="16" y="62" class="mono-sm" fill="#fde68a">IN1</text>
+
+    <rect x="-8" y="72" width="16" height="12" rx="2" fill="#e67e22"/>
+    <circle cx="0" cy="78" r="3" fill="#ffffff"/>
+    <text x="16" y="82" class="mono-sm" fill="#fed7aa">IN2</text>
+
+    <rect x="-8" y="92" width="16" height="12" rx="2" fill="#9b59b6"/>
+    <circle cx="0" cy="98" r="3" fill="#ffffff"/>
+    <text x="16" y="102" class="mono-sm" fill="#e9d5ff">IN3</text>
+
+    <rect x="-8" y="112" width="16" height="12" rx="2" fill="#8e44ad"/>
+    <circle cx="0" cy="118" r="3" fill="#ffffff"/>
+    <text x="16" y="122" class="mono-sm" fill="#f3e8ff">IN4</text>
+  </g>
+
+  <!-- 28BYJ-48 Stepper Motor Illustration (Right) -->
+  <g transform="translate(760, 270)" filter="url(#shadow)">
+    <!-- Motor Round Body -->
+    <circle cx="70" cy="70" r="64" fill="url(#stepper-body)" stroke="#64748b" stroke-width="2.5"/>
+    <rect x="10" y="60" width="120" height="20" fill="#cbd5e1" rx="4"/>
+    <circle cx="20" cy="70" r="5" fill="#fcfcfc" stroke="#64748b" stroke-width="2"/>
+    <circle cx="120" cy="70" r="5" fill="#fcfcfc" stroke="#64748b" stroke-width="2"/>
+
+    <!-- Gear Shaft (Brass) -->
+    <circle cx="70" cy="70" r="22" fill="#d97706" stroke="#b45309" stroke-width="2"/>
+    <circle cx="70" cy="70" r="14" fill="#f59e0b"/>
+    <rect x="66" y="52" width="8" height="36" fill="#b45309"/>
+
+    <text x="70" y="115" text-anchor="middle" font-family="sans-serif" font-size="11.5px" font-weight="700" fill="#1e293b">28BYJ-48</text>
+    <text x="70" y="130" text-anchor="middle" font-family="sans-serif" font-size="9.5px" font-weight="600" fill="#475569">5V DC Stepper</text>
+  </g>
+
+  <!-- 5-Pin Ribbon Wire between ULN2003 and 28BYJ-48 Motor -->
+  <path d="M 645 277 C 685 277, 720 310, 780 310" fill="none" stroke="#e84118" stroke-width="2.2"/>
+  <path d="M 653 277 C 690 277, 725 315, 780 315" fill="none" stroke="#f97316" stroke-width="2.2"/>
+  <path d="M 661 277 C 695 277, 730 320, 780 320" fill="none" stroke="#fbbf24" stroke-width="2.2"/>
+  <path d="M 669 277 C 700 277, 735 325, 780 325" fill="none" stroke="#ec4899" stroke-width="2.2"/>
+  <path d="M 677 277 C 705 277, 740 330, 780 330" fill="none" stroke="#3b82f6" stroke-width="2.2"/>
+
+  <!-- Wiring connections between Pico and ULN2003 -->
+  <!-- IN1 (GP1, x=158, y=156) -> ULN2003 IN1 (x=480, y=288) -->
+  <path d="M 158 156 L 40 156 L 40 540 L 440 540 L 440 288 L 480 288" fill="none" stroke="#fcfcfc" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 158 156 L 40 156 L 40 540 L 440 540 L 440 288 L 480 288" fill="none" stroke="#f39c12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- GND (Pico GND Pin 3, x=158, y=174) -> ULN2003 GND Pin (x=523, y=390) -->
+  <path d="M 158 174 L 54 174 L 54 554 L 523 554 L 523 400" fill="none" stroke="#fcfcfc" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 158 174 L 54 174 L 54 554 L 523 554 L 523 400" fill="none" stroke="#2f3640" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- IN2 (GP2, x=158, y=192) -> ULN2003 IN2 (x=480, y=308) -->
+  <path d="M 158 192 L 380 192 L 380 308 L 480 308" fill="none" stroke="#fcfcfc" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 158 192 L 380 192 L 380 308 L 480 308" fill="none" stroke="#e67e22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- IN3 (GP3, x=158, y=210) -> ULN2003 IN3 (x=480, y=328) -->
+  <path d="M 158 210 L 396 210 L 396 328 L 480 328" fill="none" stroke="#fcfcfc" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 158 210 L 396 210 L 396 328 L 480 328" fill="none" stroke="#9b59b6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- IN4 (GP4, x=158, y=228) -> ULN2003 IN4 (x=480, y=348) -->
+  <path d="M 158 228 L 412 228 L 412 348 L 480 348" fill="none" stroke="#fcfcfc" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 158 228 L 412 228 L 412 348 L 480 348" fill="none" stroke="#8e44ad" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- VBUS 5V (Pico Pin 40, x=334, y=138) -> ULN2003 5V (x=507, y=390) -->
+  <path d="M 334 138 L 456 138 L 456 460 L 507 460 L 507 400" fill="none" stroke="#fcfcfc" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 334 138 L 456 138 L 456 460 L 507 460 L 507 400" fill="none" stroke="#e84118" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
