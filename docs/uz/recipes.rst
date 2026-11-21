@@ -273,7 +273,7 @@ Bitta GPIO pin (``GP1``), 5V (``VBUS``) va yerga (``GND``) ulangan servo motor (
 .. note::
     Servo motor quvvatiga oid eslatma:
 
-    - Motorlar harakatlanish paytida katta lahzali oqim sarflaydi, shuning uchun Pico qayta yuklanishining (Brown-out) oldini olish uchun 3.3V (``3V3``) o'rniga **``VBUS`` (USB 5V, Pin 40)** piniga ulanishi kerak.
+    - Motorlar harakatlanish paytida katta lahzali oqim sarflaydi, shuning uchun Pico qayta yuklanishining (Brown-out) oldini olish uchun 3.3V (``3V3``) o'rniga ``VBUS`` (USB 5V, Pin 40) piniga ulanishi kerak.
     - Bir nechta servo yoki og'ir yuk ostidagi mexanizmlar ishlatilganda, tashqi 5V quvvat manbaidan foydalanish tavsiya etiladi (Pico ning ``GND``\ i bilan umumiy yer ulanishi shart).
 
 .. image:: /images/servo.svg
@@ -317,7 +317,17 @@ Roverni (taxminan) kvadrat bo'ylab harakatlantiring:
 Stepper motor (Stepper motor)
 -----------------------------
 
-Drayver platasi (masalan, ULN2003) orqali ulangan stepper motorni boshqarish.
+Drayver platasi (masalan, ULN2003) orqali ulangan 28BYJ-48 5V stepper motorni aniq boshqarish.
+
+.. image:: /images/circuit_stepper.svg
+    :alt: ULN2003 drayver platasi orqali stepper motorga ulangan Raspberry Pi Pico diagrammasi
+
+Asosiy aylanish boshqaruvi
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Soat yo'nalishi va teskari yo'nalishda aylanish boshqaruvi:
+
+.. literalinclude:: /examples/stepper_basic.py
 
 Analog soat
 ~~~~~~~~~~~

@@ -274,7 +274,7 @@ A servo motor (such as the SG-90) connected to a single GPIO pin (``GP1``), 5V (
 .. note::
     Servo Power Wiring Note:
 
-    - Servo motors draw large momentary currents during movement, so always power them from **``VBUS`` (USB 5V, Pin 40)** instead of the Pico's 3.3V (``3V3``) pin to prevent brown-out resets.
+    - Servo motors draw large momentary currents during movement, so always power them from ``VBUS`` (USB 5V, Pin 40) instead of the Pico's 3.3V (``3V3``) pin to prevent brown-out resets.
     - If using multiple servos or high-load mechanisms, use an external 5V power supply with a shared common ground to ``GND``.
 
 .. image:: /images/servo.svg
@@ -319,7 +319,17 @@ Move the rover (roughly) in a square:
 Stepper motor
 -------------
 
-Control a stepper motor connected via a driver board (e.g. ULN2003).
+Control a 28BYJ-48 5V stepper motor connected via a driver board (e.g. ULN2003).
+
+.. image:: /images/circuit_stepper.svg
+    :alt: A diagram of the Raspberry Pi Pico connected to a stepper motor via a ULN2003 driver board
+
+Basic rotation
+~~~~~~~~~~~~~~
+
+Basic clockwise and counter-clockwise rotation control:
+
+.. literalinclude:: examples/stepper_basic.py
 
 Analog clock
 ~~~~~~~~~~~~
