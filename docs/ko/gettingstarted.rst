@@ -45,17 +45,17 @@ Mu에서 picozero-rw를 설치하려면 **패키지(Packages)**\ 를 클릭합�
 Mu에서 수동 설치하기
 ==================
 
-Mu의 파일 관리자를 사용하여 ``picozero.py`` 코드를 Raspberry Pi Pico로 복사하여 picozero를 설치할 수 있습니다.
+Mu의 파일 관리자를 사용하여 ``picozero`` 패키지 폴더를 Raspberry Pi Pico로 복사하여 picozero를 설치할 수 있습니다.
 
 **파일(Files)** 버튼을 클릭하여 파일 관리자를 엽니다.
 
 .. image:: /images/mu-files-button.jpg
     :alt: Mu에서 파일(Files) 버튼 클릭
 
-Mu의 **컴퓨터의 파일(Files on your computer)** 창에서 ``pico_lib`` 폴더 안에 ``picozero.py`` 파일을 찾습니다. 해당 파일을 **Files on your device** 창으로 드래그 앤 드롭합니다.
+Mu의 **컴퓨터의 파일(Files on your computer)** 창에서 ``pico_lib`` 폴더 안에 ``picozero`` 폴더를 찾아 **Files on your device** 창(또는 ``lib`` 폴더)으로 복사합니다.
 
 .. image:: /images/mu-drag-and-drop.jpg
-    :alt: Mu에서 컴퓨터의 picozero.py를 장치로 드래그 앤 드롭
+    :alt: Mu에서 컴퓨터의 picozero 폴더를 장치로 드래그 앤 드롭
 
 Thonny를 사용하여 설치하기
 =========================
@@ -104,55 +104,42 @@ PyPI에서 `picozero-rw`\ 를 검색하십시오.
 Thonny를 사용한 수동 설치
 =======================
 
-picozero는 ``picozero.py`` 코드를 Raspberry Pi Pico에 복사하여 설치할 수 있습니다.
-
-picozero `GitHub 저장소`_\ 를 클론하거나 `picozero.py`_ 파일에서 코드를 복사하여 메인 컴퓨터에 저장하십시오.
-
-.. _GitHub 저장소: https://github.com/roboticsware/picozero
-.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/refs/heads/main/picozero/picozero.py
-
-picozero.py라는 이름의 새 파일을 만들고 코드를 복사한 후 Raspberry Pi Pico에 저장하십시오.
-
-Thonny를 사용하여 picozero.py 복사하기
-------------------------------------
-
-또는 Thonny 파일 관리자를 사용하여 ``picozero.py`` 파일을 Raspberry Pi Pico로 전송할 수 있습니다.
+picozero는 Raspberry Pi Pico의 메모리 사용량을 최소화하기 위해 기능별 모듈 폴더(``picozero/``)로 구성되어 있습니다. Thonny 파일 관리자를 사용하여 ``picozero`` 폴더 전체를 Raspberry Pi Pico로 업로드하여 수동 설치할 수 있습니다.
 
 **보기(View)** 메뉴에서 **파일(Files)** 옵션에 체크되어 있는지 확인하십시오. 이렇게 하면 파일을 볼 수 있습니다.
 
 .. image:: /images/thonny-view-files.jpg
     :alt: 보기 메뉴에서 선택된 파일 옵션
 
-picozero `GitHub 저장소`_\ 를 클론하거나 `picozero.py`_ 파일을 다운로드하여 메인 컴퓨터에 저장하십시오.
+picozero `GitHub 저장소`_\ 를 클론하거나 저장소 ZIP 파일을 다운로드하여 컴퓨터에 압축을 푸십시오.
 
 .. only:: html
 
    .. raw:: html
 
       <p>
-        <a href="https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py" download>
-          ⬇️ picozero.py 다운로드
+        <a href="https://github.com/roboticsware/picozero/archive/refs/heads/main.zip" download>
+          ⬇️ picozero (ZIP) 다운로드
         </a>
       </p>
 
 .. only:: not html
 
-   ``picozero.py`` 다운로드:
-   https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py
+   ``picozero`` (ZIP) 다운로드:
+   https://github.com/roboticsware/picozero/archive/refs/heads/main.zip
 
 .. _GitHub 저장소: https://github.com/roboticsware/picozero
-.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py
 
-Thonny에서 클론한 디렉토리 또는 파일을 저장한 위치로 이동하여 ``picozero.py`` 파일을 찾으십시오.
+Thonny에서 클론하거나 압축을 푼 디렉토리로 이동하여 ``picozero`` 폴더(``__init__.py``, ``core.py``, ``led.py``, ``oled.py`` 등이 포함됨)를 찾으십시오.
 
 .. image:: /images/thonny-navigate-downloads.jpg
 
-파일을 오른쪽 버튼으로 클릭하고 **Upload to /** 옵션을 선택하십시오. Raspberry Pi Pico에 ``picozero.py`` 파일의 복사본이 표시되어야 합니다.
+``picozero`` 폴더를 오른쪽 버튼으로 클릭하고 **Upload to /** (또는 **Upload to /lib**) 옵션을 선택하십시오. Raspberry Pi Pico에 ``picozero`` 폴더가 표시되어야 합니다.
 
 .. image:: /images/thonny-upload-files.jpg
-    :alt: picozero.py 파일 메뉴에서 선택된 "Upload to /" 옵션
+    :alt: 파일 메뉴에서 선택된 "Upload to /" 옵션
 .. image:: /images/thonny-copy-picozero.jpg
-    :alt: Raspberry Pi Pico 파일 뷰어에 표시된 picozero.py 파일
+    :alt: Raspberry Pi Pico 파일 뷰어에 표시된 picozero 패키지
 
 내장 LED를 제어하는 프로그램 작성하기
 ====================================

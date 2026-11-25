@@ -46,6 +46,7 @@ import time
 
 setattr(time, "ticks_ms", lambda x: None)
 setattr(time, "ticks_us", lambda x: None)
+setattr(time, "sleep_ms", lambda x: None)
 
 # -- Project information -----------------------------------------------------
 project = "picozero"

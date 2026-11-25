@@ -45,17 +45,17 @@ Paketni yuklab olish va qurilmangizga o'rnatish uchun **O'rnatish** tugmasini bo
 Mu yordamida qo'lda o'rnatish
 ============================
 
-picozero-ni Mu fayl menejeri yordamida ``picozero.py`` kodini Raspberry Pi Pico-ga nusxalash orqali o'rnatish mumkin.
+picozero-ni Mu fayl menejeri yordamida ``picozero`` paket papkasini Raspberry Pi Pico-ga nusxalash orqali o'rnatish mumkin.
 
 Fayl menejerini ochish uchun **Fayllar** tugmasini bosing.
 
 .. image:: /images/mu-files-button.jpg
     :alt: Mu-dagi Fayllar tugmasini bosish
 
-Mu-dagi **Kompyuteringizdagi fayllar** oynasidan ``pico_lib`` papkasi ichidagi ``picozero.py`` faylini toping. Uni **Files on your device** oynasiga sudrab olib o'ting (drag and drop).
+Mu-dagi **Kompyuteringizdagi fayllar** oynasidagi ``pico_lib`` papkasidan ``picozero`` papkasini toping va uni **Files on your device** oynasiga (yoki ``lib`` papkasiga) nusxalang.
 
 .. image:: /images/mu-drag-and-drop.jpg
-    :alt: Mu-da picozero.py faylini kompyuterdan qurilmaga sudrab olib qo'yish
+    :alt: Mu-da picozero papkasini kompyuterdan qurilmaga sudrab olib qo'yish
 
 Ishni boshlash
 =============
@@ -107,55 +107,42 @@ Paketni yuklab olish uchun **install** tugmasini bosing.
 Thonny yordamida qo'lda o'rnatish
 ================================
 
-picozero-ni ``picozero.py`` kodini Raspberry Pi Pico-ga nusxalash orqali ham o'rnatish mumkin.
-
-picozero `GitHub repozitoriysi`_\ ni klonlang yoki `picozero.py`_\ ni yuklab oling va uni asosiy kompyuterda saqlang.
-
-.. _GitHub repozitoriysi: https://github.com/roboticsware/picozero
-.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/refs/heads/main/picozero/picozero.py
-
-picozero.py deb nomlangan yangi fayl yarating, kodni faylga nusxalang va uni Raspberry Pi Pico-da saqlang.
-
-Thonny yordamida picozero.py nusxasini ko'chirish
-------------------------------------------------
-
-Shu bilan bir qatorda, ``picozero.py`` faylini Raspberry Pi Pico-ga o'tkazish uchun Thonny fayl menejeridan foydalanishingiz mumkin.
+picozero Raspberry Pi Pico-da xotira sarfini kamaytirish uchun modulli paket (``picozero/``) shaklida tuzilgan. Thonny fayl menejeri yordamida butun ``picozero`` papkasini Raspberry Pi Pico-ga yuklab qo'lda o'rnatishingiz mumkin.
 
 **View** menyusida **Files** varianti belgilanganligiga ishonch hosil qiling. Bu sizga fayllarni ko'rish imkonini beradi.
 
 .. image:: /images/thonny-view-files.jpg
     :alt: View menyusidan tanlangan Files varianti
 
-picozero `GitHub repozitoriysi`_\ ni klonlang yoki `picozero.py`_\ ni yuklab oling va uni asosiy kompyuterda saqlang.
+picozero `GitHub repozitoriysi`_\ ni klonlang yoki ZIP arxivni yuklab olib kompyuteringizda arxivdan chiqaring.
 
 .. only:: html
 
    .. raw:: html
 
       <p>
-        <a href="https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py" download>
-          ⬇️ picozero.py-ni yuklab olish
+        <a href="https://github.com/roboticsware/picozero/archive/refs/heads/main.zip" download>
+          ⬇️ picozero (ZIP)-ni yuklab olish
         </a>
       </p>
 
 .. only:: not html
 
-   ``picozero.py``-ni yuklab olish:
-   https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py
+   ``picozero`` (ZIP)-ni yuklab olish:
+   https://github.com/roboticsware/picozero/archive/refs/heads/main.zip
 
 .. _GitHub repozitoriysi: https://github.com/roboticsware/picozero
-.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/refs/heads/main/picozero/picozero.py
 
-Thonny-da klonlangan katalogga yoki faylni saqlagan joyingizga boring va ``picozero.py`` faylini toping.
+Thonny-da klonlangan yoki arxivdan chiqarilgan katalogga o'ting va ``picozero`` papkasini (``__init__.py``, ``core.py``, ``led.py``, ``oled.py`` va boshqalar joylashgan) toping.
 
 .. image:: /images/thonny-navigate-downloads.jpg
 
-Faylni o'ng tugma bilan bosing va **Upload to /** variantini tanlang. Raspberry Pi Pico-da ``picozero.py`` faylining nusxasini ko'rishingiz kerak.
+``picozero`` papkasini o'ng tugma bilan bosing va **Upload to /** (yoki **Upload to /lib**) variantini tanlang. Raspberry Pi Pico-da ``picozero`` papkasi ko'rinishi kerak.
 
 .. image:: /images/thonny-upload-files.jpg
-    :alt: picozero.py fayl menyusida tanlangan "Upload to /" varianti
+    :alt: Fayl menyusida tanlangan "Upload to /" varianti
 .. image:: /images/thonny-copy-picozero.jpg
-    :alt: Raspberry Pi Pico fayl ko'ruvchisida ko'rsatilgan picozero.py fayli.
+    :alt: Raspberry Pi Pico fayl ko'ruvchisida ko'rsatilgan picozero paketi.
 
 Ichki LED-ni boshqarish uchun dastur yozish
 ==========================================

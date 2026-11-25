@@ -45,17 +45,17 @@ Click on **Install** to download and install the package to your device.
 Manual install in Mu
 ====================
 
-picozero can be installed by copying the ``picozero.py`` code to your Raspberry Pi Pico using Mu's file manager.
+picozero can be installed by copying the ``picozero`` package folder to your Raspberry Pi Pico using Mu's file manager.
 
 Click on the **Files** button to open the file manager.
 
 .. image:: /images/mu-files-button.jpg
     :alt: Clicking the Files button in Mu
 
-In Mu, find the ``picozero.py`` file inside the ``pico_lib`` folder in the **Files on your computer** pane. Drag and drop it to the **Files on your device** pane.
+In Mu, find the ``picozero`` folder in the ``picozero_lib`` folder in the **Files on your computer** pane and copy it to the ``lib`` folder (or root) in the **Files on your device** pane.
 
 .. image:: /images/mu-drag-and-drop.jpg
-    :alt: Drag and drop picozero.py from computer to device in Mu
+    :alt: Drag and drop picozero folder from computer to device in Mu
 
 Install using Thonny
 ====================
@@ -104,55 +104,42 @@ Click on **install** to download the package.
 Manual install in Thonny
 ========================
 
-picozero can be installed by copying the ``picozero.py`` code to your Raspberry Pi Pico.
-
-Either clone the picozero `GitHub repository`_ or copy the code from the `picozero.py`_ file and save it on your main computer.
-
-.. _GitHub repository: https://github.com/roboticsware/picozero
-.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py
-
-Create a new file called picozero.py, copy code into the file and save it on your Raspberry Pi Pico.
-
-Copy picozero.py using Thonny
------------------------------
-
-Alternatively, you can use the Thonny file manager to transfer the ``picozero.py`` file to your Raspberry Pi Pico.
+picozero is organized as a modular package (``picozero/``) to minimize memory usage on Raspberry Pi Pico. You can install it manually by uploading the entire ``picozero`` folder to your Raspberry Pi Pico using Thonny's file manager.
 
 In the **View** menu, ensure that the **Files** option has a tick. This will let you see the files.
 
 .. image:: /images/thonny-view-files.jpg
     :alt: The Files option selected from the View menu
 
-Either clone the picozero `GitHub repository`_ or download the `picozero.py`_ file and save it on your main computer.
+Either clone the picozero `GitHub repository`_ or download the repository ZIP archive and extract it on your computer.
 
 .. only:: html
 
    .. raw:: html
 
       <p>
-        <a href="https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py" download>
-          ⬇️ Download picozero.py
+        <a href="https://github.com/roboticsware/picozero/archive/refs/heads/main.zip" download>
+          ⬇️ Download picozero (ZIP)
         </a>
       </p>
 
 .. only:: not html
 
-   Download ``picozero.py``:
-   https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py
+   Download ``picozero`` (ZIP):
+   https://github.com/roboticsware/picozero/archive/refs/heads/main.zip
 
 .. _GitHub repository: https://github.com/roboticsware/picozero
-.. _picozero.py: https://raw.githubusercontent.com/roboticsware/picozero/master/picozero/picozero.py
 
-In Thonny, navigate to the cloned directory or location you saved the file in and find the ``picozero.py`` file.
+In Thonny, navigate to the cloned or extracted directory and find the ``picozero`` folder (containing ``__init__.py``, ``core.py``, ``led.py``, ``oled.py``, etc.).
 
 .. image:: /images/thonny-navigate-downloads.jpg
 
-Right click on the file and select the **Upload to /** option. You should see a copy of the ``picozero.py`` file on the Raspberry Pi Pico.
+Right click on the ``picozero`` folder and select the **Upload to /** option (or **Upload to /lib**). You should see the ``picozero`` folder on the Raspberry Pi Pico.
 
 .. image:: /images/thonny-upload-files.jpg
-    :alt: The "Upload to /" option selected in the picozero.py file menu
+    :alt: The "Upload to /" option selected in the file menu
 .. image:: /images/thonny-copy-picozero.jpg
-    :alt: The picozero.py file shown in the Raspberry Pi Pico file viewer.
+    :alt: The picozero package shown in the Raspberry Pi Pico file viewer.
 
 Write a program to control the onboard LED
 ==========================================
