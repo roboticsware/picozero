@@ -1,40 +1,73 @@
 __name__ = "picozero"
 __package__ = "picozero"
-__version__ = "0.6.3"
+__version__ = "0.7.0"
 __author__ = "Raspberry Pi Foundation"
 
-from .picozero import (
-    PWMChannelAlreadyInUse,
-    EventFailedScheduleQueueFull,
-    pinout,
-    DigitalOutputDevice,
-    DigitalLED,
-    Buzzer,
-    PWMOutputDevice,
-    PWMLED,
-    LED,
-    pico_led,
-    PWMBuzzer,
-    Speaker,
-    RGBLED,
-    Motor,
-    Robot,
-    Stepper,
-    Servo,
-    DigitalInputDevice,
-    Switch,
-    Button,
-    MotionSensor,
-    TouchSensor,
-    AnalogInputDevice,
-    Potentiometer,
-    Pot,
-    TemperatureSensor,
-    pico_temp_sensor,
-    TempSensor,
-    Thermistor,
-    DistanceSensor,
-    I2cLcd,
-    GpioLcd,
-    OLED,
-)
+_EXPORTS = {
+    # core
+    "PWMChannelAlreadyInUse": "core",
+    "EventFailedScheduleQueueFull": "core",
+    "clamp": "core",
+    "pinout": "core",
+    "PinMixin": "core",
+    "PinsMixin": "core",
+    "OutputDevice": "core",
+    "DigitalOutputDevice": "core",
+    "PWMOutputDevice": "core",
+    "InputDevice": "core",
+    # led
+    "DigitalLED": "led",
+    "PWMLED": "led",
+    "LED": "led",
+    "pico_led": "led",
+    "RGBLED": "led",
+    # sound
+    "Buzzer": "sound",
+    "PWMBuzzer": "sound",
+    "Speaker": "sound",
+    # motor
+    "Motor": "motor",
+    "Robot": "motor",
+    "Rover": "motor",
+    "Servo": "motor",
+    # stepper
+    "Stepper": "stepper",
+    # input
+    "DigitalInputDevice": "input",
+    "Switch": "input",
+    "Button": "input",
+    "MotionSensor": "input",
+    "TouchSensor": "input",
+    # analog & distance
+    "AnalogInputDevice": "analog",
+    "Potentiometer": "analog",
+    "Pot": "analog",
+    "pico_temp_conversion": "analog",
+    "TemperatureSensor": "analog",
+    "pico_temp_sensor": "analog",
+    "TempSensor": "analog",
+    "Thermistor": "analog",
+    "DistanceSensor": "analog",
+    # lcd
+    "LcdApi": "lcd",
+    "I2cLcd": "lcd",
+    "GpioLcd": "lcd",
+    # oled
+    "OLED": "oled",
+}
+
+__all__ = list(_EXPORTS.keys())
+
+
+def __getattr__(name):
+    mod_name = _EXPORTS.get(name)
+    if mod_name is None:
+        raise AttributeError("module 'picozero' has no attribute '%s'" % name)
+    mod = __import__("picozero." + mod_name, None, None, (name,))
+    val = getattr(mod, name)
+    globals()[name] = val
+    return val
+
+
+def __dir__():
+    return sorted(set(globals().keys()) | set(_EXPORTS.keys()))

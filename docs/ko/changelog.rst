@@ -3,8 +3,9 @@
 
 .. currentmodule:: picozero
 =====================
-0.6.3 - 2026-11-19
+0.7.0 - 2026-11-25
 ------------------
++ Raspberry Pi Pico / Pico W에서의 ``MemoryError`` 를 방지하기 위해 단일 ``picozero.py`` 파일을 기능별 모듈(``core``, ``led``, ``sound``, ``motor``, ``stepper``, ``input``, ``analog``, ``lcd``, ``oled``)로 분리하고 ``__init__.py`` 에 지연 로딩(lazy loading) 적용
 + SSD1306 및 SH1106 I2C 디스플레이를 지원하는 ``OLED`` 클래스 도입
 + 초음파 및 LCD 회로도를 안전한 3.3V 배선 다이어그램으로 교체
 + 한국어, 영어, 우즈베크어 문서 업데이트

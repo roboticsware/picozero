@@ -5,10 +5,42 @@
       "github:roboticsware/picozero/picozero/__init__.py"
     ],
     [
-      "picozero/picozero.py",
-      "github:roboticsware/picozero/picozero/picozero.py"
+      "picozero/core.py",
+      "github:roboticsware/picozero/picozero/core.py"
+    ],
+    [
+      "picozero/led.py",
+      "github:roboticsware/picozero/picozero/led.py"
+    ],
+    [
+      "picozero/sound.py",
+      "github:roboticsware/picozero/picozero/sound.py"
+    ],
+    [
+      "picozero/motor.py",
+      "github:roboticsware/picozero/picozero/motor.py"
+    ],
+    [
+      "picozero/stepper.py",
+      "github:roboticsware/picozero/picozero/stepper.py"
+    ],
+    [
+      "picozero/input.py",
+      "github:roboticsware/picozero/picozero/input.py"
+    ],
+    [
+      "picozero/analog.py",
+      "github:roboticsware/picozero/picozero/analog.py"
+    ],
+    [
+      "picozero/lcd.py",
+      "github:roboticsware/picozero/picozero/lcd.py"
+    ],
+    [
+      "picozero/oled.py",
+      "github:roboticsware/picozero/picozero/oled.py"
     ]
   ],
   "deps": [],
-  "version": "0.6.3"
+  "version": "0.7.0"
 }

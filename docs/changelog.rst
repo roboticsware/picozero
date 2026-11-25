@@ -3,8 +3,9 @@ Change log
 
 .. currentmodule:: picozero
 
-0.6.3 - 2026-11-19
+0.7.0 - 2026-11-25
 ------------------
++ Refactored monolithic ``picozero.py`` into modular submodules (``core``, ``led``, ``sound``, ``motor``, ``stepper``, ``input``, ``analog``, ``lcd``, ``oled``) with lazy loading in ``__init__.py`` to prevent ``MemoryError`` on Raspberry Pi Pico / Pico W
 + Introduced ``OLED`` class supporting SSD1306 and SH1106 I2C displays
 + Replaced Ultrasonic and LCD circuit diagrams with safe 3.3V wiring diagrams
 + Updated documentation in English, Korean, and Uzbek

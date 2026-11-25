@@ -2,8 +2,9 @@ O'zgarishlar tarixi
 ===================
 
 .. currentmodule:: picozero
-0.6.3 - 2026-11-19
+0.7.0 - 2026-11-25
 ------------------
++ Raspberry Pi Pico / Pico W qurilmalarida ``MemoryError`` xatoligining oldini olish uchun yagona ``picozero.py`` fayli funksional modullarga (``core``, ``led``, ``sound``, ``motor``, ``stepper``, ``input``, ``analog``, ``lcd``, ``oled``) ajratildi va ``__init__.py`` da kechiktirilgan yuklash (lazy loading) qo'llanildi
 + SSD1306 va SH1106 I2C displeylarini qo'llab-quvvatlovchi ``OLED`` klassi joriy etildi
 + Ultratovush va LCD ulanish diagrammalari xavfsiz 3.3V sxemalarga almashtirildi
 + Ingliz, o'zbek va koreys tillaridagi hujjatlar yangilandi
