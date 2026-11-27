@@ -95,6 +95,20 @@ except TypeError:
     pico_led = LED(25, pwm=False)
 
 
+_NAMED_COLORS = {
+    "red": (255, 0, 0),
+    "green": (0, 255, 0),
+    "blue": (0, 0, 255),
+    "yellow": (255, 255, 0),
+    "cyan": (0, 255, 255),
+    "magenta": (255, 0, 255),
+    "purple": (128, 0, 255),
+    "white": (255, 255, 255),
+    "black": (0, 0, 0),
+    "orange": (255, 128, 0),
+}
+
+
 class RGBLED(OutputDevice, PinsMixin):
     """
     Extends :class:`OutputDevice` and represents a full colour LED component (composed
@@ -106,11 +120,12 @@ class RGBLED(OutputDevice, PinsMixin):
 
         from picozero import RGBLED
         rgb = RGBLED(1, 2, 3)
-        rgb.color = (1, 1, 0)
+        rgb.value = (1, 1, 0)
 
-    0–255 colours are also supported::
+    0–255 colours and named colour strings are also supported via ``color``::
 
         rgb.color = (255, 255, 0)
+        rgb.color = "yellow"
 
     :type red: int
     :param red:
@@ -190,20 +205,29 @@ class RGBLED(OutputDevice, PinsMixin):
     def _from_255(self, value):
         return 0 if value == 0 else value / 255
 
+    def _parse_color_255(self, value):
+        if isinstance(value, str):
+            rgb = _NAMED_COLORS.get(value.lower())
+            if rgb is None:
+                raise ValueError(f"Unknown color name: {value}")
+            return rgb
+        return value
+
     @property
     def color(self):
         """
         Represents the colour of the LED as an RGB 3-tuple of ``(red, green,
         blue)`` where each value is between 0 and 255 if *pwm* was :data:`True`
         when the class was constructed (but only takes values of 0 or 255 otherwise).
-        For example, red would be ``(255, 0, 0)`` and yellow would be ``(255, 255,
-        0)``, whereas orange would be ``(255, 127, 0)``.
+        Accepts either an ``(R, G, B)`` 0–255 tuple or a colour name string such as
+        ``"red"``, ``"green"``, ``"cyan"``, ``"orange"``.
         """
         return tuple(self._to_255(v) for v in self.value)
 
     @color.setter
     def color(self, value):
-        self.value = tuple(self._from_255(v) for v in value)
+        rgb = self._parse_color_255(value)
+        self.value = tuple(self._from_255(v) for v in rgb)
 
     @property
     def red(self):
@@ -308,7 +332,8 @@ class RGBLED(OutputDevice, PinsMixin):
             on_times = (on_times,) * len(colors)
         if type(fade_times) is not tuple:
             fade_times = (fade_times,) * len(colors)
-        # If any value is above zero then treat all as 0-255 values
+        colors = tuple(self._parse_color_255(c) if isinstance(c, str) else c for c in colors)
+        # If any value is above 1 then treat all as 0-255 values
         if any(v > 1 for v in sum(colors, ())):
             colors = tuple(tuple(self._from_255(v) for v in t) for t in colors)
 
