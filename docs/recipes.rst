@@ -180,7 +180,7 @@ Use callbacks to respond to motion events:
 RGB LEDs
 --------
 
-Set colours with an :class:`RGBLED`:
+Set colours with an :class:`RGBLED` (accepts 0–255 ``(R, G, B)`` tuples or colour name strings such as ``"red"``, ``"green"``, ``"blue"``, ``"yellow"``, ``"cyan"``, ``"magenta"``, ``"purple"``, ``"orange"``, ``"white"``, and ``"black"``; also supported in :meth:`~picozero.RGBLED.blink`, :meth:`~picozero.RGBLED.pulse`, and :meth:`~picozero.RGBLED.cycle`):
 
 .. literalinclude:: examples/rgb_led.py
 

@@ -175,7 +175,7 @@ PIR(Passive Infrared) 센서를 사용하여 움직임을 감지합니다:
 RGB LED
 -------
 
-:class:`RGBLED`\ 로 색상 설정하기:
+:class:`RGBLED`\ 로 색상 설정하기 (``color`` 속성 및 :meth:`~picozero.RGBLED.blink`, :meth:`~picozero.RGBLED.pulse`, :meth:`~picozero.RGBLED.cycle` 에서 0~255 ``(R, G, B)`` 튜플뿐만 아니라 ``"red"``, ``"green"``, ``"blue"``, ``"yellow"``, ``"cyan"``, ``"magenta"``, ``"purple"``, ``"orange"``, ``"white"``, ``"black"`` 같은 색상 이름 문자열도 사용할 수 있습니다):
 
 .. literalinclude:: /examples/rgb_led.py
 
@@ -186,8 +186,7 @@ RGB LED
 깜빡이기 (Blink)
 ~~~~~~~~~~~~~~~
 
-색상 사이를 변경하려면 :meth:`~picozero.RGBLED.blink`\ 를 사용하십시오. 어떤 색상을 사용할지, 각 색상이 얼마나 유지될지 제어할 수 있습니다. 색상 `(0, 0, 0)`은 꺼짐을 의미합니다. 
-색상 사이를 변경하려면 :meth:`~picozero.RGBLED.blink`\ 를 사용하십시오. 어떤 색상을 사용할지, 각 색상이 얼마나 유지될지 제어할 수 있습니다. 색상 `(0, 0, 0)` 은 꺼짐을 의미합니다. 
+색상 사이를 변경하려면 :meth:`~picozero.RGBLED.blink`\ 를 사용하십시오. 어떤 색상을 사용할지, 각 색상이 얼마나 유지될지 제어할 수 있습니다. 색상 ``(0, 0, 0)`` 또는 ``"black"`` 은 꺼짐을 의미합니다. 
 
 :meth:`~picozero.RGBLED.blink`\ 가 정해진 횟수만큼 실행될지, 끝날 때까지 기다릴지, 아니면 다른 코드가 실행될 수 있도록 즉시 반환할지 제어할 수 있습니다.
 

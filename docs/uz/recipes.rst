@@ -179,7 +179,7 @@ Harakat hodisalariga javob berish uchun qayta chaqiruvlardan (callbacks) foydala
 RGB svetodiodlar
 ----------------
 
-:class:`RGBLED` yordamida ranglarni o'rnatish:
+:class:`RGBLED` yordamida ranglarni o'rnatish (``color`` xususiyati hamda :meth:`~picozero.RGBLED.blink`, :meth:`~picozero.RGBLED.pulse`, :meth:`~picozero.RGBLED.cycle` metodlarida 0–255 ``(R, G, B)`` kortejlaridan tashqari ``"red"``, ``"green"``, ``"blue"``, ``"yellow"``, ``"cyan"``, ``"magenta"``, ``"purple"``, ``"orange"``, ``"white"``, ``"black"`` kabi rang nomlari satrlari ham qoʻllab-quvvatlanadi):
 
 .. literalinclude:: /examples/rgb_led.py
 

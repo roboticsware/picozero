@@ -21,6 +21,14 @@ sleep(1)
 rgb.color = (255, 255, 255)  # white
 sleep(1)
 
+# Named colour strings are also supported
+rgb.color = "red"
+sleep(1)
+rgb.color = "cyan"
+sleep(1)
+rgb.color = "orange"
+sleep(1)
+
 rgb.color = (0, 0, 0)  # off
 sleep(1)
 
