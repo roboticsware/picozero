@@ -1,6 +1,6 @@
 __name__ = "picozero"
 __package__ = "picozero"
-__version__ = "0.7.0"
+__version__ = "0.7.1"
 __author__ = "Raspberry Pi Foundation"
 
 _EXPORTS = {
@@ -54,6 +54,8 @@ _EXPORTS = {
     "GpioLcd": "lcd",
     # oled
     "OLED": "oled",
+    # wifi
+    "WiFi": "wifi",
 }
 
 __all__ = list(_EXPORTS.keys())

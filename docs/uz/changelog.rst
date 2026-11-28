@@ -2,6 +2,12 @@ O'zgarishlar tarixi
 ===================
 
 .. currentmodule:: picozero
+0.7.1 - 2026-11-28
+------------------
++ Raspberry Pi Pico W / Pico 2 W uchun ``WiFi`` klassi (``picozero.wifi``) qo'shildi (``espzero.WiFi`` bilan mos ``connect``, ``disconnect``, ``start_ap``, ``stop_ap``, ``scan``, ``serve``, ``async_serve``)
++ ``RGBLED.color`` hamda ``blink`` / ``pulse`` / ``cycle`` metodlariga rang nomlari satrlari (``"red"``, ``"green"``, ``"cyan"``, ``"orange"`` va b.) qo'shildi
++ Ingliz, o'zbek va koreys tillaridagi hujjatlar yangilandi
+
 0.7.0 - 2026-11-25
 ------------------
 + Raspberry Pi Pico / Pico W qurilmalarida ``MemoryError`` xatoligining oldini olish uchun yagona ``picozero.py`` fayli funksional modullarga (``core``, ``led``, ``sound``, ``motor``, ``stepper``, ``input``, ``analog``, ``lcd``, ``oled``) ajratildi va ``__init__.py`` da kechiktirilgan yuklash (lazy loading) qo'llanildi

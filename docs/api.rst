@@ -193,3 +193,11 @@ OLED
     :show-inheritance:
     :inherited-members:
     :members:
+
+WiFi
+----
+
+.. autoclass:: WiFi
+    :show-inheritance:
+    :inherited-members:
+    :members:

@@ -54,7 +54,7 @@ copyright = "2025, Raspberry Pi Foundation"
 author = "Raspberry Pi Foundation"
 
 # The full version, including alpha/beta/rc tags
-release = "0.7.0"
+release = "0.7.1"
 
 # -- General configuration ---------------------------------------------------
 extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode", "sphinx.ext.intersphinx"]

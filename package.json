@@ -39,8 +39,12 @@
     [
       "picozero/oled.py",
       "github:roboticsware/picozero/picozero/oled.py"
+    ],
+    [
+      "picozero/wifi.py",
+      "github:roboticsware/picozero/picozero/wifi.py"
     ]
   ],
   "deps": [],
-  "version": "0.7.0"
+  "version": "0.7.1"
 }

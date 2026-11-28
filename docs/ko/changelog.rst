@@ -3,6 +3,12 @@
 
 .. currentmodule:: picozero
 =====================
+0.7.1 - 2026-11-28
+------------------
++ Raspberry Pi Pico W / Pico 2 W용 ``WiFi`` 클래스(``picozero.wifi``) 추가: ``espzero.WiFi``\ 와 호환되는 ``connect``, ``disconnect``, ``start_ap``, ``stop_ap``, ``scan``, ``serve``, ``async_serve`` 제공
++ ``RGBLED.color`` 및 ``blink`` / ``pulse`` / ``cycle``\ 에 색상 이름 문자열(``"red"``, ``"green"``, ``"cyan"``, ``"orange"`` 등) 지원 추가
++ 한국어, 영어, 우즈베크어 문서 업데이트
+
 0.7.0 - 2026-11-25
 ------------------
 + Raspberry Pi Pico / Pico W에서의 ``MemoryError`` 를 방지하기 위해 단일 ``picozero.py`` 파일을 기능별 모듈(``core``, ``led``, ``sound``, ``motor``, ``stepper``, ``input``, ``analog``, ``lcd``, ``oled``)로 분리하고 ``__init__.py`` 에 지연 로딩(lazy loading) 적용

@@ -193,3 +193,12 @@ OLED 디스플레이 (OLED)
     :show-inheritance:
     :inherited-members:
     :members:
+
+WiFi (무선 네트워크 & 웹 서버)
+----------------------------
+
+.. autoclass:: WiFi
+    :show-inheritance:
+    :inherited-members:
+    :members:
+

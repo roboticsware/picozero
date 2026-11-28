@@ -396,3 +396,44 @@ GPIO 핀만 사용하여 4비트 병렬 모드로 LiquidCrystal 디스플레이(
     :alt: 4비트 GPIO 모드로 16x2 캐릭터 LCD 디스플레이에 연결된 Raspberry Pi Pico 다이어그램.
 
 .. literalinclude:: /examples/lcd.py
+
+WiFi (Pico W / Pico 2 W)
+------------------------
+
+**Raspberry Pi Pico W / Pico 2 W** 에서 2.4GHz 공유기에 연결하거나 단독 핫스팟(AP)을 열고, 간편하게 HTTP 웹 서버를 실행합니다:
+
+.. code-block:: python
+
+    from picozero import WiFi, pico_led
+
+    wifi = WiFi()
+    # 공유기 접속(STA 모드)
+    wifi.connect("MySSID", "password")
+    # 또는 단독 핫스팟(AP 모드): wifi.start_ap("PicoW-AP", "password1234")
+
+    def handle(path, params):
+        if path == "/on":
+            pico_led.on()
+        elif path == "/off":
+            pico_led.off()
+        return "<h1>Pico W</h1><a href='/on'>켜기</a> | <a href='/off'>끄기</a>"
+
+    wifi.serve(handle, port=80)
+
+LED 제어·센서 측정 등 다른 비동기 작업과 동시에 웹 서버를 돌리려면 ``wifi.async_serve(handle)`` 를 사용하세요:
+
+.. code-block:: python
+
+    import asyncio
+    from picozero import WiFi, pico_led
+
+    wifi = WiFi()
+    wifi.start_ap("PicoW-AP", "password1234")
+
+    def handle(path):
+        if path == "/toggle":
+            pico_led.toggle()
+        return {"led": pico_led.is_active}
+
+    asyncio.run(wifi.async_serve(handle))
+

@@ -400,3 +400,44 @@ Faqat GPIO pinlaridan 4-bit rejimida foydalanib LiquidCrystal displeylarida (16x
     :alt: 4-bit GPIO rejimida 16x2 belgili LCD displeyga ulangan Raspberry Pi Pico diagrammasi.
 
 .. literalinclude:: /examples/lcd.py
+
+WiFi (Pico W / Pico 2 W)
+------------------------
+
+**Raspberry Pi Pico W / Pico 2 W** da 2.4GHz Wi-Fi tarmog'iga ulaning yoki mustaqil Access Point (hotspot) ochib, yengil HTTP veb-serverni ishga tushiring:
+
+.. code-block:: python
+
+    from picozero import WiFi, pico_led
+
+    wifi = WiFi()
+    # Routerga ulanish (STA rejimi)
+    wifi.connect("MySSID", "password")
+    # Yoki mustaqil AP rejimi: wifi.start_ap("PicoW-AP", "password1234")
+
+    def handle(path, params):
+        if path == "/on":
+            pico_led.on()
+        elif path == "/off":
+            pico_led.off()
+        return "<h1>Pico W</h1><a href='/on'>YOQISH</a> | <a href='/off'>O'CHIRISH</a>"
+
+    wifi.serve(handle, port=80)
+
+Boshqa asinxron vazifalar bilan bir vaqtda veb-serverni ishlatish uchun ``wifi.async_serve(handle)`` metodidan foydalaning:
+
+.. code-block:: python
+
+    import asyncio
+    from picozero import WiFi, pico_led
+
+    wifi = WiFi()
+    wifi.start_ap("PicoW-AP", "password1234")
+
+    def handle(path):
+        if path == "/toggle":
+            pico_led.toggle()
+        return {"led": pico_led.is_active}
+
+    asyncio.run(wifi.async_serve(handle))
+

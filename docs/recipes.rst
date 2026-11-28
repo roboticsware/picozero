@@ -403,3 +403,43 @@ Print characters on LiquidCrystal displays (16x2 LCD) in 4-bit mode using GPIO p
     :alt: A diagram of the Raspberry Pi Pico connected to a 16x2 Character LCD in 4-bit GPIO mode with RW tied to GND.
 
 .. literalinclude:: examples/lcd.py
+
+WiFi (Pico W / Pico 2 W)
+------------------------
+
+Connect to a 2.4GHz Wi-Fi network or start a standalone Access Point (hotspot) and run a lightweight HTTP web server on **Raspberry Pi Pico W / Pico 2 W**:
+
+.. code-block:: python
+
+    from picozero import WiFi, pico_led
+
+    wifi = WiFi()
+    # Station mode: connect to a router
+    wifi.connect("MySSID", "password")
+    # Or AP mode (hotspot): wifi.start_ap("PicoW-AP", "password1234")
+
+    def handle(path, params):
+        if path == "/on":
+            pico_led.on()
+        elif path == "/off":
+            pico_led.off()
+        return "<h1>Pico W</h1><a href='/on'>ON</a> | <a href='/off'>OFF</a>"
+
+    wifi.serve(handle, port=80)
+
+For non-blocking ``asyncio`` tasks (such as blinking LEDs or driving motors while serving web requests), use ``wifi.async_serve(handle)``:
+
+.. code-block:: python
+
+    import asyncio
+    from picozero import WiFi, pico_led
+
+    wifi = WiFi()
+    wifi.start_ap("PicoW-AP", "password1234")
+
+    def handle(path):
+        if path == "/toggle":
+            pico_led.toggle()
+        return {"led": pico_led.is_active}
+
+    asyncio.run(wifi.async_serve(handle))
